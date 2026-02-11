@@ -25,6 +25,10 @@ import {
   DollarSign,
   Users,
   Star,
+  XCircle,
+  ShieldOff,
+  Siren,
+  Package,
 } from "lucide-react";
 import { cn, VANITY_NUMBER, VANITY_HREF } from "@/lib/utils";
 import InlineIntakeForm from "@/components/forms/InlineIntakeForm";
@@ -309,6 +313,118 @@ function PracticeAreaCards() {
             </motion.div>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════════════════ */
+/*  4b. THINGS REPO MEN CANNOT DO                                      */
+/* ═══════════════════════════════════════════════════════════════════ */
+
+const cannotDoItems = [
+  {
+    icon: Ban,
+    title: "Breach the Peace",
+    desc: "They cannot yell, threaten, curse, push you, or argue when you object to the repossession.",
+  },
+  {
+    icon: ShieldOff,
+    title: "Enter Private Property",
+    desc: "They cannot enter a closed garage, cut locks, break gates, or damage your property to take the vehicle.",
+  },
+  {
+    icon: Car,
+    title: "Take a Vehicle with Someone Inside",
+    desc: "They cannot repossess the car if you or anyone else is inside it or about to drive it.",
+  },
+  {
+    icon: Siren,
+    title: "Impersonate Law Enforcement",
+    desc: "They cannot use fake police lights, badges, or pretend to be law enforcement to trick you.",
+  },
+  {
+    icon: Scale,
+    title: "Repo After Bankruptcy Filing",
+    desc: "They cannot repossess your car after you've filed bankruptcy — that violates the automatic stay.",
+  },
+  {
+    icon: Package,
+    title: "Keep Your Personal Belongings",
+    desc: "They must return personal items left in the vehicle — tools, child seats, documents, clothing, and more.",
+  },
+  {
+    icon: FileWarning,
+    title: "Skip Required Notices",
+    desc: "They cannot skip sending you a proper Notice of Sale or collect a deficiency balance without following the law.",
+  },
+  {
+    icon: DollarSign,
+    title: "Charge Illegal Fees",
+    desc: "They cannot charge you retrieval fees for your belongings or tack on unauthorized charges after repossession.",
+  },
+];
+
+function ThingsRepoMenCannotDo() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  return (
+    <section ref={ref} className="bg-[#0D1B2A] py-20 lg:py-28">
+      <div className="mx-auto max-w-6xl px-4">
+        <motion.div
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={fadeUp}
+          className="text-center mb-14"
+        >
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
+            Things Repo Men &amp; Lenders{" "}
+            <span className="text-[#C1121F]">CANNOT DO</span>
+          </h2>
+          <p className="mt-3 text-[#778DA9] text-lg max-w-2xl mx-auto">
+            When repossessing your car, the law protects you. If any of these happened, you may have a case.
+          </p>
+        </motion.div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {cannotDoItems.map((item, i) => (
+            <motion.div
+              key={item.title}
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              custom={i}
+              variants={fadeUp}
+              className="group bg-white/5 border border-white/10 rounded-xl p-5 hover:border-[#C1121F]/40 hover:bg-[#C1121F]/5 transition-all duration-300"
+            >
+              <div className="relative mb-4 w-12 h-12 rounded-xl bg-[#C1121F]/10 border border-[#C1121F]/20 flex items-center justify-center group-hover:bg-[#C1121F]/20 transition-colors">
+                <item.icon className="w-6 h-6 text-[#C1121F]" />
+                <XCircle className="absolute -top-1.5 -right-1.5 w-5 h-5 text-[#C1121F] bg-[#0D1B2A] rounded-full" />
+              </div>
+              <h3 className="font-extrabold text-white text-base sm:text-lg mb-2 group-hover:text-[#C1121F] transition-colors">
+                {item.title}
+              </h3>
+              <p className="text-[#778DA9] text-sm leading-relaxed">
+                {item.desc}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.div
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          custom={8}
+          variants={fadeUp}
+          className="mt-10 text-center"
+        >
+          <Link
+            href="#violations"
+            className="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-[#C1121F] text-white font-bold hover:bg-[#C1121F]/90 transition-colors shadow-lg shadow-[#C1121F]/20"
+          >
+            Did any of these happen to you? Check below <ChevronRight className="w-4 h-4" />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
@@ -782,6 +898,7 @@ export default function HomePage() {
       <HeroSection />
       <HowItWorks />
       <PracticeAreaCards />
+      <ThingsRepoMenCannotDo />
       <ViolationsChecklist />
 
       {/* State Map */}
