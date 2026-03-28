@@ -12,6 +12,7 @@ import {
   Users,
   Eye,
   Ban,
+  Phone,
 } from "lucide-react";
 import { VANITY_HREF } from "@/lib/utils";
 import InlineIntakeForm from "@/components/forms/InlineIntakeForm";
