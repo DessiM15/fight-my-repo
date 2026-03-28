@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Phone } from "lucide-react";
-import { VANITY_NUMBER, VANITY_HREF } from "@/lib/utils";
+import { VANITY_HREF } from "@/lib/utils";
 
 export function MobileBottomBar() {
   const pathname = usePathname();
@@ -29,8 +28,7 @@ export function MobileBottomBar() {
           href={VANITY_HREF}
           className="flex flex-1 items-center justify-center gap-2 bg-red px-4 py-3 text-sm font-bold text-white transition-colors hover:bg-red-dark"
         >
-          <Phone className="size-4" />
-          Call Now
+          Call Us Now
         </a>
       </div>
     </div>

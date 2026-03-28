@@ -6,11 +6,10 @@ import {
   MessageCircle,
   X,
   Send,
-  Phone,
   ChevronRight,
   ArrowRight,
 } from "lucide-react";
-import { cn, VANITY_NUMBER, VANITY_HREF } from "@/lib/utils";
+import { cn, VANITY_HREF } from "@/lib/utils";
 
 /* ═══════════════════════════════════════════════════════════════════ */
 /*  CONVERSATION STATE MACHINE                                         */
@@ -331,7 +330,7 @@ export default function ChatWidget() {
             animate={{ scale: 1 }}
             exit={{ scale: 0 }}
             onClick={() => setIsOpen(true)}
-            className="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-[#D4A843] text-[#0D1B2A] shadow-lg shadow-[#D4A843]/30 flex items-center justify-center hover:bg-[#D4A843]/90 transition-colors"
+            className="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-[#D4A843] text-[#0A0A0A] shadow-lg shadow-[#D4A843]/30 flex items-center justify-center hover:bg-[#D4A843]/90 transition-colors"
             aria-label="Open chat"
           >
             <MessageCircle className="w-7 h-7" />
@@ -350,23 +349,23 @@ export default function ChatWidget() {
             className="fixed bottom-6 right-6 z-50 w-[380px] max-w-[calc(100vw-2rem)] h-[560px] max-h-[calc(100vh-6rem)] bg-white rounded-2xl shadow-2xl border border-gray-200 flex flex-col overflow-hidden"
           >
             {/* Header */}
-            <div className="bg-[#0D1B2A] px-4 py-3 flex items-center justify-between flex-shrink-0">
+            <div className="bg-[#0A0A0A] px-4 py-3 flex items-center justify-between flex-shrink-0">
               <div className="flex items-center gap-3">
                 <div className="w-9 h-9 rounded-full bg-[#D4A843] flex items-center justify-center">
-                  <MessageCircle className="w-5 h-5 text-[#0D1B2A]" />
+                  <MessageCircle className="w-5 h-5 text-[#0A0A0A]" />
                 </div>
                 <div>
                   <p className="text-white font-semibold text-sm">
                     Case Evaluation
                   </p>
-                  <p className="text-[#778DA9] text-xs">
-                    Powered by Sue The Collector
+                  <p className="text-[#8A8A8A] text-xs">
+                    Powered by Fight My Repo
                   </p>
                 </div>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-[#778DA9] hover:text-white transition-colors p-1"
+                className="text-[#8A8A8A] hover:text-white transition-colors p-1"
                 aria-label="Close chat"
               >
                 <X className="w-5 h-5" />
@@ -381,8 +380,8 @@ export default function ChatWidget() {
                   className={cn(
                     "max-w-[85%] rounded-2xl px-4 py-2.5 text-sm",
                     msg.from === "bot"
-                      ? "bg-gray-100 text-[#0D1B2A] rounded-bl-md self-start"
-                      : "bg-[#D4A843] text-[#0D1B2A] rounded-br-md ml-auto"
+                      ? "bg-gray-100 text-[#0A0A0A] rounded-bl-md self-start"
+                      : "bg-[#D4A843] text-[#0A0A0A] rounded-br-md ml-auto"
                   )}
                 >
                   {msg.text}
@@ -402,7 +401,7 @@ export default function ChatWidget() {
                     <button
                       key={choice.label}
                       onClick={() => handleChoice(choice.label, choice.next)}
-                      className="w-full text-left px-4 py-2.5 rounded-xl border border-[#D4A843]/30 bg-[#D4A843]/5 text-[#0D1B2A] text-sm font-medium hover:bg-[#D4A843]/15 hover:border-[#D4A843]/50 transition-all flex items-center justify-between gap-2"
+                      className="w-full text-left px-4 py-2.5 rounded-xl border border-[#D4A843]/30 bg-[#D4A843]/5 text-[#0A0A0A] text-sm font-medium hover:bg-[#D4A843]/15 hover:border-[#D4A843]/50 transition-all flex items-center justify-between gap-2"
                     >
                       {choice.label}
                       <ChevronRight className="w-4 h-4 text-[#D4A843] flex-shrink-0" />
@@ -418,7 +417,7 @@ export default function ChatWidget() {
                     <a
                       href="/#hero-form"
                       onClick={() => setIsOpen(false)}
-                      className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl bg-[#D4A843] text-[#0D1B2A] font-bold text-sm hover:bg-[#D4A843]/90 transition-colors"
+                      className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl bg-[#D4A843] text-[#0A0A0A] font-bold text-sm hover:bg-[#D4A843]/90 transition-colors"
                     >
                       <Send className="w-4 h-4" />
                       Fill Out Intake Form
@@ -429,13 +428,12 @@ export default function ChatWidget() {
                       href={VANITY_HREF}
                       className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl bg-[#C1121F] text-white font-bold text-sm hover:bg-[#C1121F]/90 transition-colors"
                     >
-                      <Phone className="w-4 h-4" />
-                      Call {VANITY_NUMBER}
+                      Call Us Now
                     </a>
                   )}
                   <button
                     onClick={handleRestart}
-                    className="w-full text-center text-xs text-[#778DA9] hover:text-[#D4A843] transition-colors py-2"
+                    className="w-full text-center text-xs text-[#8A8A8A] hover:text-[#D4A843] transition-colors py-2"
                   >
                     Start Over
                   </button>
@@ -447,7 +445,7 @@ export default function ChatWidget() {
 
             {/* Footer */}
             <div className="flex-shrink-0 border-t border-gray-100 px-4 py-2.5">
-              <p className="text-[10px] text-[#778DA9] text-center">
+              <p className="text-[10px] text-[#8A8A8A] text-center">
                 This is not legal advice. For a full evaluation, submit a form
                 or call us.
               </p>

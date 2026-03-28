@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import {
-  Phone,
   ChevronRight,
   AlertTriangle,
   CheckCircle2,
@@ -13,7 +12,7 @@ import {
   Users,
   Car,
 } from "lucide-react";
-import { VANITY_NUMBER, VANITY_HREF } from "@/lib/utils";
+import { VANITY_HREF } from "@/lib/utils";
 import InlineIntakeForm from "@/components/forms/InlineIntakeForm";
 import { CTABanner } from "@/components/layout/CTABanner";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
@@ -40,7 +39,7 @@ export async function generateMetadata({
   const lender = getLenderBySlug(lenderSlug);
   if (!lender) return { title: "Lender Not Found" };
   return {
-    title: `Sue ${lender.name} | Wrongful Repossession Lawyers | Sue The Collector`,
+    title: `Sue ${lender.name} | Wrongful Repossession Lawyers | Fight My Repo`,
     description: `Has ${lender.name} wrongfully repossessed your vehicle or violated your rights? Free case review. No fees unless we win.`,
   };
 }
@@ -64,7 +63,7 @@ export default async function LenderPage({
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="bg-gradient-to-br from-[#0D1B2A] via-[#1B4965] to-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-gradient-to-br from-[#0A0A0A] via-[#1A1A1A] to-[#0A0A0A] py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4">
           <Breadcrumbs
             items={[
@@ -87,22 +86,22 @@ export default async function LenderPage({
               <span className="text-[#D4A843]">{lender.name}</span>
             </h1>
 
-            <p className="mt-6 text-lg text-[#778DA9] max-w-xl">
+            <p className="mt-6 text-lg text-[#8A8A8A] max-w-xl">
               {lender.description}
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Link
                 href="#intake"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#D4A843] text-[#0D1B2A] font-bold hover:bg-[#D4A843]/90 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#D4A843] text-[#0A0A0A] font-bold hover:bg-[#D4A843]/90 transition-colors"
               >
                 Free Case Review <ChevronRight className="w-4 h-4" />
               </Link>
               <a
                 href={VANITY_HREF}
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-white/20 text-white font-bold hover:bg-white/5 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-[#C1121F]/30 text-[#C1121F] font-bold hover:bg-[#C1121F]/5 transition-colors"
               >
-                <Phone className="w-5 h-5" /> {VANITY_NUMBER}
+                Call Us Now
               </a>
             </div>
           </div>
@@ -112,7 +111,7 @@ export default async function LenderPage({
       {/* ─── Common Violations ─── */}
       <section className="bg-white py-20 lg:py-28">
         <div className="mx-auto max-w-4xl px-4">
-          <h2 className="text-3xl font-extrabold text-[#0D1B2A] mb-8">
+          <h2 className="text-3xl font-extrabold text-[#0A0A0A] mb-8">
             Common {lender.name} Violations
           </h2>
           <div className="space-y-4">
@@ -122,16 +121,16 @@ export default async function LenderPage({
                 className="flex items-start gap-4 bg-gray-50 rounded-xl border border-gray-200 p-5"
               >
                 <CheckCircle2 className="w-5 h-5 text-[#D4A843] flex-shrink-0 mt-0.5" />
-                <span className="text-[#0D1B2A]">{v}</span>
+                <span className="text-[#0A0A0A]">{v}</span>
               </div>
             ))}
           </div>
 
           <div className="mt-10 bg-[#D4A843] rounded-2xl p-8 text-center">
-            <p className="text-[#0D1B2A] font-semibold mb-1">
+            <p className="text-[#0A0A0A] font-semibold mb-1">
               Typical Settlement Range vs {lender.name}
             </p>
-            <p className="text-4xl font-extrabold text-[#0D1B2A]">
+            <p className="text-4xl font-extrabold text-[#0A0A0A]">
               {rangeStr}
             </p>
           </div>
@@ -142,10 +141,10 @@ export default async function LenderPage({
       {isFullPage && ext && (
         <section className="bg-gray-50 py-20 lg:py-28">
           <div className="mx-auto max-w-4xl px-4">
-            <h2 className="text-3xl font-extrabold text-[#0D1B2A] mb-6">
+            <h2 className="text-3xl font-extrabold text-[#0A0A0A] mb-6">
               About {lender.name}
             </h2>
-            <p className="text-[#778DA9] text-lg leading-relaxed">
+            <p className="text-[#8A8A8A] text-lg leading-relaxed">
               {ext.overview}
             </p>
           </div>
@@ -156,7 +155,7 @@ export default async function LenderPage({
       {isFullPage && ext?.violationDetails && ext.violationDetails.length > 0 && (
         <section className="bg-white py-20 lg:py-28">
           <div className="mx-auto max-w-4xl px-4">
-            <h2 className="text-3xl font-extrabold text-[#0D1B2A] mb-8">
+            <h2 className="text-3xl font-extrabold text-[#0A0A0A] mb-8">
               Detailed Violation Analysis
             </h2>
             <div className="space-y-4">
@@ -165,10 +164,10 @@ export default async function LenderPage({
                   key={i}
                   className="bg-gray-50 rounded-xl border border-gray-200 p-6"
                 >
-                  <h3 className="text-lg font-bold text-[#0D1B2A] mb-2">
+                  <h3 className="text-lg font-bold text-[#0A0A0A] mb-2">
                     {detail.title}
                   </h3>
-                  <p className="text-[#778DA9]">{detail.description}</p>
+                  <p className="text-[#8A8A8A]">{detail.description}</p>
                 </div>
               ))}
             </div>
@@ -180,7 +179,7 @@ export default async function LenderPage({
       {isFullPage && ext?.recentSettlements && ext.recentSettlements.length > 0 && (
         <section className="bg-gray-50 py-20 lg:py-28">
           <div className="mx-auto max-w-4xl px-4">
-            <h2 className="text-3xl font-extrabold text-[#0D1B2A] mb-8">
+            <h2 className="text-3xl font-extrabold text-[#0A0A0A] mb-8">
               Regulatory Actions &amp; Settlements
             </h2>
             <div className="space-y-4">
@@ -193,15 +192,15 @@ export default async function LenderPage({
                     <span className="text-2xl font-extrabold text-[#D4A843]">
                       {settlement.amount}
                     </span>
-                    <span className="block text-xs text-[#778DA9]">
+                    <span className="block text-xs text-[#8A8A8A]">
                       ({settlement.year})
                     </span>
                   </div>
-                  <p className="text-[#0D1B2A]">{settlement.description}</p>
+                  <p className="text-[#0A0A0A]">{settlement.description}</p>
                 </div>
               ))}
             </div>
-            <p className="mt-4 text-xs text-[#778DA9] italic">
+            <p className="mt-4 text-xs text-[#8A8A8A] italic">
               * Regulatory settlements are separate from individual consumer
               claims. Your case value depends on your specific circumstances.
             </p>
@@ -213,10 +212,10 @@ export default async function LenderPage({
       {!isFullPage && (
         <section className="bg-gray-50 py-20 lg:py-28">
           <div className="mx-auto max-w-4xl px-4">
-            <h2 className="text-3xl font-extrabold text-[#0D1B2A] mb-6">
+            <h2 className="text-3xl font-extrabold text-[#0A0A0A] mb-6">
               Your Rights Against {lender.name}
             </h2>
-            <p className="text-[#778DA9] text-lg mb-6">
+            <p className="text-[#8A8A8A] text-lg mb-6">
               If {lender.name} has wrongfully repossessed your vehicle, violated
               the SCRA, or engaged in unfair collection practices, federal and
               state consumer protection laws give you the right to sue for
@@ -236,7 +235,7 @@ export default async function LenderPage({
                   className="flex items-center gap-3 bg-white rounded-xl border border-gray-200 p-4"
                 >
                   <item.icon className="w-5 h-5 text-[#D4A843] flex-shrink-0" />
-                  <span className="text-[#0D1B2A] text-sm font-medium">
+                  <span className="text-[#0A0A0A] text-sm font-medium">
                     {item.text}
                   </span>
                 </div>
@@ -247,13 +246,13 @@ export default async function LenderPage({
       )}
 
       {/* ─── Intake Form ─── */}
-      <section id="intake" className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section id="intake" className="bg-[#0A0A0A] py-20 lg:py-28">
         <div className="mx-auto max-w-2xl px-4">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-extrabold text-white">
               Free Case Review vs {lender.name}
             </h2>
-            <p className="mt-3 text-[#778DA9]">
+            <p className="mt-3 text-[#8A8A8A]">
               Tell us what {lender.name} did. Our attorneys will evaluate your
               case at no cost.
             </p>

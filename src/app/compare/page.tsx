@@ -11,14 +11,13 @@ import {
   Smartphone,
   Layout,
   MousePointer,
-  Phone,
   ChevronRight,
   Star,
   Zap,
   BarChart3,
   Eye,
 } from "lucide-react";
-import { cn, VANITY_NUMBER, VANITY_HREF } from "@/lib/utils";
+import { cn, VANITY_HREF } from "@/lib/utils";
 
 /* ═══════════════════════════════════════════════════════════════════ */
 /*  TYPES & DATA                                                       */
@@ -85,7 +84,7 @@ const sections: ComparisonSection[] = [
         { text: "Framer Motion fade-in animations", good: true },
       ],
       mockContent: (
-        <div className="bg-gradient-to-br from-[#0D1B2A] to-[#1B4965] rounded-lg p-6 h-64 flex flex-col justify-center">
+        <div className="bg-gradient-to-br from-[#0A0A0A] to-[#1A1A1A] rounded-lg p-6 h-64 flex flex-col justify-center">
           <div className="h-2 bg-[#D4A843]/30 rounded w-24 mb-3" />
           <div className="h-5 bg-white/80 rounded w-56 mb-2" />
           <div className="h-5 bg-[#D4A843]/80 rounded w-48 mb-3" />
@@ -143,7 +142,7 @@ const sections: ComparisonSection[] = [
             {["Home", "Repo", "FCRA", "SCRA", "Results"].map((label) => (
               <div
                 key={label}
-                className="h-6 px-2 bg-[#0D1B2A] rounded text-white text-[10px] flex items-center"
+                className="h-6 px-2 bg-[#0A0A0A] rounded text-white text-[10px] flex items-center"
               >
                 {label}
               </div>
@@ -157,7 +156,7 @@ const sections: ComparisonSection[] = [
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <div
                 key={i}
-                className="h-8 bg-[#1B4965]/20 rounded text-[8px] flex items-center justify-center text-[#1B4965]"
+                className="h-8 bg-[#1A1A1A]/20 rounded text-[8px] flex items-center justify-center text-[#1A1A1A]"
               >
                 State {i}
               </div>
@@ -205,8 +204,8 @@ const sections: ComparisonSection[] = [
       ],
       mockContent: (
         <div className="flex justify-center">
-          <div className="w-32 h-56 bg-[#0D1B2A] rounded-2xl p-2 border-4 border-[#1B4965]">
-            <div className="bg-gradient-to-b from-[#0D1B2A] to-[#1B4965] rounded h-full flex flex-col p-2">
+          <div className="w-32 h-56 bg-[#0A0A0A] rounded-2xl p-2 border-4 border-[#1A1A1A]">
+            <div className="bg-gradient-to-b from-[#0A0A0A] to-[#1A1A1A] rounded h-full flex flex-col p-2">
               <div className="h-2 bg-[#D4A843]/50 rounded w-16 mb-2" />
               <div className="h-2 bg-white/80 rounded w-full mb-1" />
               <div className="h-2 bg-[#D4A843] rounded w-3/4 mb-3" />
@@ -261,7 +260,7 @@ const sections: ComparisonSection[] = [
         { text: "Social proof and urgency near all forms", good: true },
       ],
       mockContent: (
-        <div className="bg-[#0D1B2A] rounded-lg p-4 h-48 flex items-center justify-center gap-3">
+        <div className="bg-[#0A0A0A] rounded-lg p-4 h-48 flex items-center justify-center gap-3">
           <div className="bg-white/10 border border-white/20 rounded-lg p-3 w-28">
             <div className="h-2 bg-white/50 rounded mb-2" />
             <div className="h-4 bg-white/20 rounded mb-1" />
@@ -270,7 +269,7 @@ const sections: ComparisonSection[] = [
           </div>
           <div className="space-y-2">
             <div className="bg-[#D4A843] rounded-full w-8 h-8 flex items-center justify-center">
-              <Star className="w-4 h-4 text-[#0D1B2A]" />
+              <Star className="w-4 h-4 text-[#0A0A0A]" />
             </div>
             <div className="bg-[#C1121F] rounded-lg px-2 py-1 flex items-center gap-1">
               <Phone className="w-3 h-3 text-white" />
@@ -292,14 +291,14 @@ export default function ComparePage() {
   return (
     <div className="pb-20">
       {/* ─── Hero ─── */}
-      <section className="bg-gradient-to-br from-[#0D1B2A] via-[#1B4965] to-[#0D1B2A] py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-[#0A0A0A] via-[#1A1A1A] to-[#0A0A0A] py-16 lg:py-24">
         <div className="mx-auto max-w-5xl px-4 text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
             Website Redesign:{" "}
             <span className="text-[#D4A843]">Before & After</span>
           </h1>
-          <p className="mt-4 text-lg text-[#778DA9] max-w-2xl mx-auto">
-            See how the new design transforms the Sue The Collector website from
+          <p className="mt-4 text-lg text-[#8A8A8A] max-w-2xl mx-auto">
+            See how the new design transforms the Fight My Repo website from
             a basic template into a high-converting, SEO-optimized lead
             generation machine.
           </p>
@@ -314,8 +313,8 @@ export default function ComparePage() {
                   "px-6 py-2.5 rounded-lg font-bold text-sm transition-all",
                   activeView === view
                     ? view === "new"
-                      ? "bg-[#D4A843] text-[#0D1B2A]"
-                      : "bg-white text-[#0D1B2A]"
+                      ? "bg-[#D4A843] text-[#0A0A0A]"
+                      : "bg-white text-[#0A0A0A]"
                     : "text-white/60 hover:text-white"
                 )}
               >
@@ -333,10 +332,10 @@ export default function ComparePage() {
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
                 <stat.icon className="w-6 h-6 text-[#D4A843] mx-auto mb-2" />
-                <p className="text-2xl font-extrabold text-[#0D1B2A]">
+                <p className="text-2xl font-extrabold text-[#0A0A0A]">
                   {stat.value}
                 </p>
-                <p className="text-xs text-[#778DA9] font-medium">
+                <p className="text-xs text-[#8A8A8A] font-medium">
                   {stat.label}
                 </p>
               </div>
@@ -357,11 +356,11 @@ export default function ComparePage() {
           <div className="mx-auto max-w-6xl px-4">
             <div className="flex items-center gap-3 mb-2">
               <section.icon className="w-6 h-6 text-[#D4A843]" />
-              <h2 className="text-2xl font-extrabold text-[#0D1B2A]">
+              <h2 className="text-2xl font-extrabold text-[#0A0A0A]">
                 {section.title}
               </h2>
             </div>
-            <p className="text-[#778DA9] mb-10">{section.description}</p>
+            <p className="text-[#8A8A8A] mb-10">{section.description}</p>
 
             <div className="grid lg:grid-cols-2 gap-8">
               {/* Old Design */}
@@ -387,7 +386,7 @@ export default function ComparePage() {
                       ) : (
                         <X className="w-4 h-4 text-[#C1121F] mt-0.5 flex-shrink-0" />
                       )}
-                      <span className="text-[#778DA9]">{f.text}</span>
+                      <span className="text-[#8A8A8A]">{f.text}</span>
                     </li>
                   ))}
                 </ul>
@@ -416,7 +415,7 @@ export default function ComparePage() {
                       ) : (
                         <X className="w-4 h-4 text-[#C1121F] mt-0.5 flex-shrink-0" />
                       )}
-                      <span className="text-[#0D1B2A]">{f.text}</span>
+                      <span className="text-[#0A0A0A]">{f.text}</span>
                     </li>
                   ))}
                 </ul>
@@ -427,13 +426,13 @@ export default function ComparePage() {
       ))}
 
       {/* ─── CTA ─── */}
-      <section className="bg-[#0D1B2A] py-16 lg:py-24">
+      <section className="bg-[#0A0A0A] py-16 lg:py-24">
         <div className="mx-auto max-w-3xl px-4 text-center">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
             Ready to See the{" "}
             <span className="text-[#D4A843]">New Design Live?</span>
           </h2>
-          <p className="text-[#778DA9] text-lg mb-8">
+          <p className="text-[#8A8A8A] text-lg mb-8">
             The new website is designed to convert more visitors into qualified
             leads with better SEO, faster performance, and a modern user
             experience.
@@ -441,16 +440,15 @@ export default function ComparePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#D4A843] text-[#0D1B2A] font-bold text-lg hover:bg-[#D4A843]/90 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#D4A843] text-[#0A0A0A] font-bold text-lg hover:bg-[#D4A843]/90 transition-colors"
             >
               View New Homepage <ArrowRight className="w-5 h-5" />
             </Link>
             <a
               href={VANITY_HREF}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-white/20 text-white font-bold hover:bg-white/5 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-[#C1121F]/30 text-[#C1121F] font-bold hover:bg-[#C1121F]/5 transition-colors"
             >
-              <Phone className="w-5 h-5" />
-              {VANITY_NUMBER}
+              Call Us Now
             </a>
           </div>
         </div>

@@ -1,5 +1,5 @@
 // =============================================================================
-// FAQ Data for Sue The Collector - Wrongful Repossession FAQs
+// FAQ Data for Fight My Repo - Wrongful Repossession FAQs
 // =============================================================================
 
 export interface FAQItem {

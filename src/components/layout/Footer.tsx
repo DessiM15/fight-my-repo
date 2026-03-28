@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Scale, Phone } from "lucide-react";
-import { VANITY_NUMBER, VANITY_HREF } from "@/lib/utils";
+import { Logo } from "./Logo";
+import { VANITY_HREF } from "@/lib/utils";
 
 const practiceAreaLinks = [
   { label: "Wrongful Repossession", href: "/wrongful-repossession" },
@@ -60,26 +60,19 @@ export function Footer() {
           {/* Brand Column */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="group mb-4 inline-flex items-center gap-2.5">
-              <Scale className="size-6 text-gold" />
-              <div className="flex flex-col">
-                <span className="font-heading text-lg font-bold leading-tight tracking-wide text-white">
-                  SUE THE COLLECTOR
-                </span>
-                <span className="h-0.5 w-full bg-gold" />
-              </div>
+              <Logo size="md" />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-steel-light">
-              Founded by Jarred D. Johnson, Sue The Collector partners with
+              Founded by Jarred D. Johnson, Fight My Repo partners with
               attorneys nationwide to fight for consumers who have been
               wrongfully repossessed, harassed by debt collectors,
               or had their rights violated.
             </p>
             <a
               href={VANITY_HREF}
-              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gold transition-colors hover:text-gold-dark"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#C1121F] transition-colors hover:text-[#C1121F]/80"
             >
-              <Phone className="size-4" />
-              {VANITY_NUMBER}
+              Call Us Now
             </a>
           </div>
 
@@ -112,7 +105,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-4 sm:flex-row lg:px-8">
           <p className="text-xs text-steel">
-            &copy; {new Date().getFullYear()} Sue The Collector. All rights
+            &copy; {new Date().getFullYear()} Fight My Repo. All rights
             reserved.
           </p>
           <div className="flex items-center gap-4">

@@ -1,5 +1,5 @@
 // =============================================================================
-// State Data for Sue The Collector - Wrongful Repossession by State
+// State Data for Fight My Repo - Wrongful Repossession by State
 // =============================================================================
 
 export interface DetailedStatute {

@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import {
-  Phone,
   Award,
   Scale,
   Star,
@@ -12,14 +11,14 @@ import {
   Quote,
   CheckCircle2,
 } from "lucide-react";
-import { VANITY_NUMBER, VANITY_HREF } from "@/lib/utils";
+import { VANITY_HREF } from "@/lib/utils";
 import { CTABanner } from "@/components/layout/CTABanner";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Case Results & Reviews | Sue The Collector | $1B+ in Debt Canceled",
+  title: "Case Results & Reviews | Fight My Repo | $1B+ in Debt Canceled",
   description:
-    "See our case results and client reviews. Sue The Collector has helped cancel over $1 billion in consumer debt nationwide. Entrepreneur 360 honoree.",
+    "See our case results and client reviews. Fight My Repo has helped cancel over $1 billion in consumer debt nationwide. Entrepreneur 360 honoree.",
 };
 
 const caseResults = [
@@ -109,7 +108,7 @@ const awards = [
 const testimonials = [
   {
     quote:
-      "Sue The Collector fought for me when no one else would. My car was wrongfully repossessed and they got me a settlement I never expected.",
+      "Fight My Repo fought for me when no one else would. My car was wrongfully repossessed and they got me a settlement I never expected.",
     name: "Verified Client",
     location: "Texas",
     rating: 5,
@@ -123,7 +122,7 @@ const testimonials = [
   },
   {
     quote:
-      "My credit report had errors for years. After contacting Sue The Collector, the errors were fixed and I received compensation for the damage it caused.",
+      "My credit report had errors for years. After contacting Fight My Repo, the errors were fixed and I received compensation for the damage it caused.",
     name: "Verified Client",
     location: "California",
     rating: 5,
@@ -134,7 +133,7 @@ export default function ResultsReviewsPage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="bg-gradient-to-br from-[#0D1B2A] via-[#1B4965] to-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-gradient-to-br from-[#0A0A0A] via-[#1A1A1A] to-[#0A0A0A] py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4">
           <Breadcrumbs
             items={[
@@ -157,8 +156,8 @@ export default function ResultsReviewsPage() {
               for Consumers Nationwide
             </h1>
 
-            <p className="mt-6 text-lg text-[#778DA9] max-w-xl">
-              Since 2014, Sue The Collector has been fighting for consumer
+            <p className="mt-6 text-lg text-[#8A8A8A] max-w-xl">
+              Since 2014, Fight My Repo has been fighting for consumer
               rights. Here are just a few of our case results and what our
               clients say about working with us.
             </p>
@@ -166,16 +165,15 @@ export default function ResultsReviewsPage() {
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Link
                 href="/#hero-form"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#D4A843] text-[#0D1B2A] font-bold hover:bg-[#D4A843]/90 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#D4A843] text-[#0A0A0A] font-bold hover:bg-[#D4A843]/90 transition-colors"
               >
                 Get Your Free Case Review <ChevronRight className="w-4 h-4" />
               </Link>
               <a
                 href={VANITY_HREF}
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-white/20 text-white font-bold hover:bg-white/5 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-[#C1121F]/30 text-[#C1121F] font-bold hover:bg-[#C1121F]/5 transition-colors"
               >
-                <Phone className="w-5 h-5" />
-                {VANITY_NUMBER}
+                Call Us Now
               </a>
             </div>
           </div>
@@ -186,10 +184,10 @@ export default function ResultsReviewsPage() {
       <section className="bg-white py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0D1B2A]">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A0A0A]">
               Notable Case Results
             </h2>
-            <p className="mt-3 text-[#778DA9] text-lg max-w-2xl mx-auto">
+            <p className="mt-3 text-[#8A8A8A] text-lg max-w-2xl mx-auto">
               These cases represent a sampling of our firm&rsquo;s results across
               various practice areas.
             </p>
@@ -204,13 +202,13 @@ export default function ResultsReviewsPage() {
                 <div className="text-3xl font-extrabold text-[#D4A843] mb-3">
                   {result.amount}
                 </div>
-                <div className="inline-block px-3 py-1 rounded-full bg-[#0D1B2A] text-white text-xs font-semibold mb-3">
+                <div className="inline-block px-3 py-1 rounded-full bg-[#0A0A0A] text-white text-xs font-semibold mb-3">
                   {result.type}
                 </div>
-                <p className="text-[#778DA9] text-sm mb-4">
+                <p className="text-[#8A8A8A] text-sm mb-4">
                   {result.description}
                 </p>
-                <div className="flex items-center justify-between text-xs text-[#778DA9]">
+                <div className="flex items-center justify-between text-xs text-[#8A8A8A]">
                   <span>{result.state}</span>
                   <span>{result.year}</span>
                 </div>
@@ -218,7 +216,7 @@ export default function ResultsReviewsPage() {
             ))}
           </div>
 
-          <p className="mt-8 text-center text-xs text-[#778DA9] italic max-w-2xl mx-auto">
+          <p className="mt-8 text-center text-xs text-[#8A8A8A] italic max-w-2xl mx-auto">
             * Past results do not guarantee future outcomes. Each case is unique
             and depends on its own facts and circumstances. The amounts shown
             include settlements and verdicts before any fees and costs.
@@ -227,7 +225,7 @@ export default function ResultsReviewsPage() {
       </section>
 
       {/* ─── Founder Bio ─── */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-[#0A0A0A] py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Bio */}
@@ -235,16 +233,16 @@ export default function ResultsReviewsPage() {
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-6">
                 Founded by Jarred D. Johnson
               </h2>
-              <p className="text-[#778DA9] text-lg mb-6">
+              <p className="text-[#8A8A8A] text-lg mb-6">
                 After being personally harassed by debt collectors over
                 non-collectible debts, entrepreneur Jarred D. Johnson founded
-                Sue The Collector in 2014 to help consumers fight back. Based
+                Fight My Repo in 2014 to help consumers fight back. Based
                 in Franklin, Tennessee, the company has since helped cancel
                 over $1 billion in consumer debt and assisted tens of thousands
                 of consumers in obtaining legal representation.
               </p>
-              <p className="text-[#778DA9] mb-8">
-                Sue The Collector was named one of the Best Entrepreneurial
+              <p className="text-[#8A8A8A] mb-8">
+                Fight My Repo was named one of the Best Entrepreneurial
                 Companies in America by Entrepreneur Magazine&apos;s 2018
                 Entrepreneur360 list, ranked #162. The company partners with
                 law firms across all 50 states to take on illegal debt
@@ -256,7 +254,7 @@ export default function ResultsReviewsPage() {
                 {credentials.map((cred) => (
                   <li key={cred} className="flex items-start gap-3">
                     <CheckCircle2 className="w-4 h-4 text-[#D4A843] flex-shrink-0 mt-1" />
-                    <span className="text-[#778DA9] text-sm">{cred}</span>
+                    <span className="text-[#8A8A8A] text-sm">{cred}</span>
                   </li>
                 ))}
               </ul>
@@ -277,7 +275,7 @@ export default function ResultsReviewsPage() {
                   </div>
                   <div>
                     <h4 className="font-bold text-white mb-1">{award.title}</h4>
-                    <p className="text-[#778DA9] text-sm">{award.desc}</p>
+                    <p className="text-[#8A8A8A] text-sm">{award.desc}</p>
                   </div>
                 </div>
               ))}
@@ -290,7 +288,7 @@ export default function ResultsReviewsPage() {
       <section className="bg-white py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0D1B2A]">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A0A0A]">
               What Our Clients Say
             </h2>
           </div>
@@ -302,7 +300,7 @@ export default function ResultsReviewsPage() {
                 className="bg-gray-50 rounded-2xl border border-gray-200 p-6"
               >
                 <Quote className="w-8 h-8 text-[#D4A843]/30 mb-4" />
-                <p className="text-[#0D1B2A] mb-6 italic leading-relaxed">
+                <p className="text-[#0A0A0A] mb-6 italic leading-relaxed">
                   &ldquo;{t.quote}&rdquo;
                 </p>
                 <div className="flex items-center gap-1 mb-3">
@@ -313,15 +311,15 @@ export default function ResultsReviewsPage() {
                     />
                   ))}
                 </div>
-                <p className="font-semibold text-[#0D1B2A] text-sm">
+                <p className="font-semibold text-[#0A0A0A] text-sm">
                   {t.name}
                 </p>
-                <p className="text-[#778DA9] text-xs">{t.location}</p>
+                <p className="text-[#8A8A8A] text-xs">{t.location}</p>
               </div>
             ))}
           </div>
 
-          <p className="mt-8 text-center text-xs text-[#778DA9] italic">
+          <p className="mt-8 text-center text-xs text-[#8A8A8A] italic">
             * Client identities protected for privacy. Reviews represent
             individual experiences and are not guarantees of outcomes.
           </p>

@@ -1,5 +1,5 @@
 // =============================================================================
-// Zod Validation Schemas for Sue The Collector
+// Zod Validation Schemas for Fight My Repo
 // =============================================================================
 
 import { z } from "zod";

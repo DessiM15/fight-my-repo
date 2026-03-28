@@ -1,5 +1,5 @@
 // =============================================================================
-// Lender Data for Sue The Collector - Auto Finance Lender Profiles
+// Lender Data for Fight My Repo - Auto Finance Lender Profiles
 // =============================================================================
 
 export interface LenderData {

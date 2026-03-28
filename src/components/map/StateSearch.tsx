@@ -87,7 +87,7 @@ export default function StateSearch({ className }: StateSearchProps) {
   return (
     <div className={cn("relative w-full max-w-md", className)}>
       <div className="relative">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#778DA9]" />
+        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#8A8A8A]" />
         <input
           ref={inputRef}
           type="text"
@@ -99,7 +99,7 @@ export default function StateSearch({ className }: StateSearchProps) {
           onFocus={() => setIsOpen(true)}
           onKeyDown={handleKeyDown}
           placeholder="Search your state..."
-          className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 bg-white text-[#0D1B2A] placeholder:text-[#778DA9]/60 focus:outline-none focus:ring-2 focus:ring-[#D4A843] focus:border-transparent text-sm"
+          className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 bg-white text-[#0A0A0A] placeholder:text-[#8A8A8A]/60 focus:outline-none focus:ring-2 focus:ring-[#D4A843] focus:border-transparent text-sm"
           aria-label="Search for a state"
           aria-expanded={isOpen}
           aria-controls="state-search-list"
@@ -124,14 +124,14 @@ export default function StateSearch({ className }: StateSearchProps) {
                 "flex items-center gap-3 px-4 py-2.5 cursor-pointer text-sm transition-colors",
                 i === highlightedIndex
                   ? "bg-[#D4A843]/10 text-[#D4A843]"
-                  : "text-[#0D1B2A] hover:bg-gray-50"
+                  : "text-[#0A0A0A] hover:bg-gray-50"
               )}
               onMouseEnter={() => setHighlightedIndex(i)}
               onClick={() => navigate(state.slug)}
             >
               <MapPin className="w-4 h-4 flex-shrink-0 text-[#D4A843]" />
               <span className="font-medium">{state.name}</span>
-              <span className="ml-auto text-xs text-[#778DA9]">
+              <span className="ml-auto text-xs text-[#8A8A8A]">
                 {state.abbr}
               </span>
             </li>
@@ -140,7 +140,7 @@ export default function StateSearch({ className }: StateSearchProps) {
       )}
 
       {isOpen && filtered.length === 0 && (
-        <div className="absolute z-50 mt-2 w-full rounded-xl border border-gray-200 bg-white shadow-xl p-4 text-center text-sm text-[#778DA9]">
+        <div className="absolute z-50 mt-2 w-full rounded-xl border border-gray-200 bg-white shadow-xl p-4 text-center text-sm text-[#8A8A8A]">
           No states found for &ldquo;{query}&rdquo;
         </div>
       )}

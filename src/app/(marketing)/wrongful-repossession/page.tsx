@@ -4,14 +4,13 @@ import {
   Car,
   AlertTriangle,
   FileWarning,
-  Phone,
   ChevronRight,
   Shield,
   Scale,
   Ban,
   DollarSign,
 } from "lucide-react";
-import { VANITY_NUMBER, VANITY_HREF } from "@/lib/utils";
+import { VANITY_HREF } from "@/lib/utils";
 import InlineIntakeForm from "@/components/forms/InlineIntakeForm";
 import { CTABanner } from "@/components/layout/CTABanner";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
@@ -19,7 +18,7 @@ import MapSection from "@/components/map/MapSection";
 
 export const metadata: Metadata = {
   title:
-    "Wrongful Repossession Lawyers | Sue for $10K-$100K+ | Sue The Collector",
+    "Wrongful Repossession Lawyers | Sue for $10K-$100K+ | Fight My Repo",
   description:
     "Was your car wrongfully repossessed? Our attorneys fight lenders nationwide. Free case review. No fees unless we win. Recover $10,000 to $100,000+.",
 };
@@ -61,7 +60,7 @@ export default function WrongfulRepossessionPage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="bg-gradient-to-br from-[#0D1B2A] via-[#1B4965] to-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-gradient-to-br from-[#0A0A0A] via-[#1A1A1A] to-[#0A0A0A] py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4">
           <Breadcrumbs
             items={[
@@ -86,7 +85,7 @@ export default function WrongfulRepossessionPage() {
                 </span>
               </h1>
 
-              <p className="mt-6 text-lg text-[#778DA9] max-w-xl">
+              <p className="mt-6 text-lg text-[#8A8A8A] max-w-xl">
                 Every state has strict rules lenders must follow before and
                 during a repossession. If they broke the law, you can sue for
                 significant compensation &mdash; and we handle everything on
@@ -96,16 +95,15 @@ export default function WrongfulRepossessionPage() {
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <Link
                   href="#intake"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#D4A843] text-[#0D1B2A] font-bold text-lg hover:bg-[#D4A843]/90 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#D4A843] text-[#0A0A0A] font-bold text-lg hover:bg-[#D4A843]/90 transition-colors"
                 >
                   Free Case Review
                 </Link>
                 <a
                   href={VANITY_HREF}
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-white/20 text-white font-bold hover:bg-white/5 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-[#C1121F]/30 text-[#C1121F] font-bold hover:bg-[#C1121F]/5 transition-colors"
                 >
-                  <Phone className="w-5 h-5" />
-                  {VANITY_NUMBER}
+                  Call Us Now
                 </a>
               </div>
             </div>
@@ -126,7 +124,7 @@ export default function WrongfulRepossessionPage() {
                     key={label}
                     className="flex items-center justify-between py-2 border-b border-white/5"
                   >
-                    <span className="text-[#778DA9] text-sm">{label}</span>
+                    <span className="text-[#8A8A8A] text-sm">{label}</span>
                     <span className="text-[#D4A843] font-bold text-sm">
                       {value}
                     </span>
@@ -142,10 +140,10 @@ export default function WrongfulRepossessionPage() {
       <section className="bg-white py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0D1B2A]">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A0A0A]">
               Find Your State&rsquo;s Repossession Laws
             </h2>
-            <p className="mt-3 text-[#778DA9] text-lg max-w-2xl mx-auto">
+            <p className="mt-3 text-[#8A8A8A] text-lg max-w-2xl mx-auto">
               Click your state on the map or search below to see your specific
               rights and protections.
             </p>
@@ -159,10 +157,10 @@ export default function WrongfulRepossessionPage() {
       <section className="bg-gray-50 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0D1B2A]">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A0A0A]">
               Common Repossession Violations
             </h2>
-            <p className="mt-3 text-[#778DA9] text-lg max-w-2xl mx-auto">
+            <p className="mt-3 text-[#8A8A8A] text-lg max-w-2xl mx-auto">
               If any of these happened to you, you likely have a strong case.
             </p>
           </div>
@@ -176,10 +174,10 @@ export default function WrongfulRepossessionPage() {
                 <div className="w-12 h-12 rounded-xl bg-[#D4A843]/10 flex items-center justify-center mb-4">
                   <v.icon className="w-6 h-6 text-[#D4A843]" />
                 </div>
-                <h3 className="text-lg font-bold text-[#0D1B2A] mb-2">
+                <h3 className="text-lg font-bold text-[#0A0A0A] mb-2">
                   {v.title}
                 </h3>
-                <p className="text-[#778DA9] text-sm">{v.desc}</p>
+                <p className="text-[#8A8A8A] text-sm">{v.desc}</p>
               </div>
             ))}
           </div>
@@ -187,13 +185,13 @@ export default function WrongfulRepossessionPage() {
       </section>
 
       {/* ─── Intake Form ─── */}
-      <section id="intake" className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section id="intake" className="bg-[#0A0A0A] py-20 lg:py-28">
         <div className="mx-auto max-w-2xl px-4">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-extrabold text-white">
               Get Your Free Case Evaluation
             </h2>
-            <p className="mt-3 text-[#778DA9]">
+            <p className="mt-3 text-[#8A8A8A]">
               Tell us what happened. If you have a case, we fight for you at no
               upfront cost.
             </p>

@@ -1,11 +1,9 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import {
-  Phone,
   FileText,
   Search,
   Shield,
@@ -30,7 +28,7 @@ import {
   Siren,
   Package,
 } from "lucide-react";
-import { cn, VANITY_NUMBER, VANITY_HREF } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import InlineIntakeForm from "@/components/forms/InlineIntakeForm";
 import MapSection from "@/components/map/MapSection";
 import { CTABanner } from "@/components/layout/CTABanner";
@@ -62,7 +60,7 @@ const fadeIn = {
 /* ═══════════════════════════════════════════════════════════════════ */
 function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center bg-[#0D1B2A] overflow-hidden">
+    <section className="relative min-h-screen flex items-center bg-[#0A0A0A] overflow-hidden">
       {/* background video */}
       <video
         autoPlay
@@ -75,7 +73,7 @@ function HeroSection() {
         <source src="/money-fall-hero-background.mp4" type="video/mp4" />
       </video>
       {/* navy blue gradient overlay on top of video */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0D1B2A]/80 via-[#1B4965]/70 to-[#0D1B2A]/80" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A0A]/80 via-[#1A1A1A]/70 to-[#0A0A0A]/80" />
       {/* decorative grid */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-5" />
       {/* radial glow */}
@@ -101,17 +99,16 @@ function HeroSection() {
               </span>
             </h1>
 
-            <p className="mt-6 text-lg sm:text-xl text-[#778DA9] max-w-xl mx-auto lg:mx-0">
-              Since 2014, Sue The Collector has helped cancel over{" "}
+            <p className="mt-6 text-lg sm:text-xl text-[#8A8A8A] max-w-xl mx-auto lg:mx-0">
+              Since 2014, Fight My Repo has helped cancel over{" "}
               <span className="text-white font-semibold">$1 billion in consumer debt</span> and
               recovered millions for people just like you. If your car was wrongfully repossessed, your
               credit report is wrong, or your SCRA rights were violated &mdash;
               we can help.
             </p>
 
-            {/* Vanity phone number — large & prominent */}
-            <motion.a
-              href={VANITY_HREF}
+            {/* Call Us Today CTA */}
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.5 }}
@@ -120,14 +117,10 @@ function HeroSection() {
               <span className="text-sm font-semibold uppercase tracking-widest text-[#C1121F]">
                 Call Us Today
               </span>
-              <span className="flex items-center gap-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white hover:text-[#D4A843] transition-colors">
-                <Phone className="w-8 h-8 sm:w-10 sm:h-10 text-[#C1121F] animate-pulse" />
-                {VANITY_NUMBER}
-              </span>
-              <span className="text-sm text-[#778DA9]">
+              <span className="text-sm text-[#8A8A8A]">
                 Free &amp; confidential. Available 24/7.
               </span>
-            </motion.a>
+            </motion.div>
           </motion.div>
 
           {/* right form */}
@@ -137,20 +130,11 @@ function HeroSection() {
             variants={fadeIn}
             className="flex flex-col items-center"
           >
-            {/* Entrepreneur 360 badge */}
-            <Image
-              src="/entrepreneur-360-badge.webp"
-              alt="Entrepreneur 360 - Best Entrepreneurial Companies in America"
-              width={280}
-              height={280}
-              className="mb-4"
-            />
-
             <div className="w-full bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6 sm:p-8 shadow-2xl">
               <h2 className="text-xl font-bold text-white mb-1">
                 Do You Have a Case?
               </h2>
-              <p className="text-[#778DA9] text-sm mb-5">
+              <p className="text-[#8A8A8A] text-sm mb-5">
                 Answer 3 quick questions to find out if you&rsquo;re owed $10K&ndash;$100K+
               </p>
               <InlineIntakeForm />
@@ -196,10 +180,10 @@ function HowItWorks() {
           variants={fadeUp}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0D1B2A]">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A0A0A]">
             How It Works
           </h2>
-          <p className="mt-3 text-[#778DA9] text-lg max-w-2xl mx-auto">
+          <p className="mt-3 text-[#8A8A8A] text-lg max-w-2xl mx-auto">
             Three simple steps to pursue the compensation you deserve.
           </p>
         </motion.div>
@@ -220,13 +204,13 @@ function HowItWorks() {
               <div className="relative z-10 w-16 h-16 rounded-2xl bg-[#D4A843]/10 border border-[#D4A843]/20 flex items-center justify-center mb-6">
                 <step.icon className="w-7 h-7 text-[#D4A843]" />
               </div>
-              <span className="absolute -top-2 -left-2 md:static md:mb-2 w-8 h-8 rounded-full bg-[#D4A843] text-[#0D1B2A] font-bold text-sm flex items-center justify-center">
+              <span className="absolute -top-2 -left-2 md:static md:mb-2 w-8 h-8 rounded-full bg-[#D4A843] text-[#0A0A0A] font-bold text-sm flex items-center justify-center">
                 {i + 1}
               </span>
-              <h3 className="text-xl font-bold text-[#0D1B2A] mb-2">
+              <h3 className="text-xl font-bold text-[#0A0A0A] mb-2">
                 {step.title}
               </h3>
-              <p className="text-[#778DA9]">{step.desc}</p>
+              <p className="text-[#8A8A8A]">{step.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -267,7 +251,7 @@ function PracticeAreaCards() {
   ];
 
   return (
-    <section ref={ref} className="bg-[#0D1B2A] py-20 lg:py-28">
+    <section ref={ref} className="bg-[#0A0A0A] py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4">
         <motion.div
           initial="hidden"
@@ -278,7 +262,7 @@ function PracticeAreaCards() {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
             How We Can Help You
           </h2>
-          <p className="mt-3 text-[#778DA9] text-lg">
+          <p className="mt-3 text-[#8A8A8A] text-lg">
             Click a practice area to learn more about your rights.
           </p>
         </motion.div>
@@ -302,7 +286,7 @@ function PracticeAreaCards() {
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#D4A843] transition-colors">
                   {area.title}
                 </h3>
-                <p className="text-[#778DA9] mb-6">{area.desc}</p>
+                <p className="text-[#8A8A8A] mb-6">{area.desc}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-[#D4A843] font-bold text-lg">
                     {area.range}
@@ -370,7 +354,7 @@ function ThingsRepoMenCannotDo() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="bg-[#0D1B2A] py-20 lg:py-28">
+    <section ref={ref} className="bg-[#0A0A0A] py-20 lg:py-28">
       <div className="mx-auto max-w-6xl px-4">
         <motion.div
           initial="hidden"
@@ -382,7 +366,7 @@ function ThingsRepoMenCannotDo() {
             Things Repo Men &amp; Lenders{" "}
             <span className="text-[#C1121F]">CANNOT DO</span>
           </h2>
-          <p className="mt-3 text-[#778DA9] text-lg max-w-2xl mx-auto">
+          <p className="mt-3 text-[#8A8A8A] text-lg max-w-2xl mx-auto">
             When repossessing your car, the law protects you. If any of these happened, you may have a case.
           </p>
         </motion.div>
@@ -399,12 +383,12 @@ function ThingsRepoMenCannotDo() {
             >
               <div className="relative mb-4 w-12 h-12 rounded-xl bg-[#C1121F]/10 border border-[#C1121F]/20 flex items-center justify-center group-hover:bg-[#C1121F]/20 transition-colors">
                 <item.icon className="w-6 h-6 text-[#C1121F]" />
-                <XCircle className="absolute -top-1.5 -right-1.5 w-5 h-5 text-[#C1121F] bg-[#0D1B2A] rounded-full" />
+                <XCircle className="absolute -top-1.5 -right-1.5 w-5 h-5 text-[#C1121F] bg-[#0A0A0A] rounded-full" />
               </div>
               <h3 className="font-extrabold text-white text-base sm:text-lg mb-2 group-hover:text-[#C1121F] transition-colors">
                 {item.title}
               </h3>
-              <p className="text-[#778DA9] text-sm leading-relaxed">
+              <p className="text-[#8A8A8A] text-sm leading-relaxed">
                 {item.desc}
               </p>
             </motion.div>
@@ -515,10 +499,10 @@ function ViolationsChecklist() {
           variants={fadeUp}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0D1B2A]">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A0A0A]">
             Check Your Violations
           </h2>
-          <p className="mt-3 text-[#778DA9] text-lg max-w-2xl mx-auto">
+          <p className="mt-3 text-[#8A8A8A] text-lg max-w-2xl mx-auto">
             Select everything that happened to you. We&rsquo;ll estimate what
             your case could be worth.
           </p>
@@ -532,7 +516,7 @@ function ViolationsChecklist() {
             >
               <div className="flex items-center gap-2 mb-4">
                 <cat.icon className="w-5 h-5 text-[#D4A843]" />
-                <h3 className="font-bold text-[#0D1B2A] text-sm">
+                <h3 className="font-bold text-[#0A0A0A] text-sm">
                   {cat.label}
                 </h3>
               </div>
@@ -546,7 +530,7 @@ function ViolationsChecklist() {
                         onChange={() => toggle(item.text)}
                         className="mt-0.5 w-5 h-5 rounded border-gray-300 text-[#D4A843] focus:ring-[#D4A843] accent-[#D4A843]"
                       />
-                      <span className="text-sm text-[#0D1B2A] group-hover:text-[#D4A843] transition-colors">
+                      <span className="text-sm text-[#0A0A0A] group-hover:text-[#D4A843] transition-colors">
                         {item.text}
                       </span>
                     </label>
@@ -564,7 +548,7 @@ function ViolationsChecklist() {
           className={cn(
             "rounded-2xl p-8 text-center transition-colors duration-300",
             total > 0
-              ? "bg-[#D4A843] text-[#0D1B2A]"
+              ? "bg-[#D4A843] text-[#0A0A0A]"
               : "bg-gray-100 text-gray-500"
           )}
         >
@@ -578,7 +562,7 @@ function ViolationsChecklist() {
               </p>
               <Link
                 href="#hero-form"
-                className="mt-6 inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-[#0D1B2A] text-white font-bold hover:bg-[#1B4965] transition-colors"
+                className="mt-6 inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-[#0A0A0A] text-white font-bold hover:bg-[#1A1A1A] transition-colors"
               >
                 Get Your Free Case Review <ChevronRight className="w-4 h-4" />
               </Link>
@@ -614,7 +598,7 @@ function KnownCompanies() {
   ];
 
   return (
-    <section ref={ref} className="bg-[#0D1B2A] py-20 lg:py-28">
+    <section ref={ref} className="bg-[#0A0A0A] py-20 lg:py-28">
       <div className="mx-auto max-w-5xl px-4">
         <motion.div
           initial="hidden"
@@ -625,7 +609,7 @@ function KnownCompanies() {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
             We Sue These Companies
           </h2>
-          <p className="mt-3 text-[#778DA9] text-lg">
+          <p className="mt-3 text-[#8A8A8A] text-lg">
             Our firm has filed cases against the biggest lenders in the country.
           </p>
         </motion.div>
@@ -721,7 +705,7 @@ function SocialProof() {
               animate={inView ? "visible" : "hidden"}
               custom={i}
               variants={fadeUp}
-              className="text-center py-8 px-4 rounded-2xl bg-[#0D1B2A]"
+              className="text-center py-8 px-4 rounded-2xl bg-[#0A0A0A]"
             >
               <p className="text-3xl sm:text-4xl font-extrabold text-[#D4A843]">
                 <AnimatedCounter
@@ -730,7 +714,7 @@ function SocialProof() {
                   suffix={stat.suffix}
                 />
               </p>
-              <p className="mt-2 text-[#778DA9] text-sm font-medium">
+              <p className="mt-2 text-[#8A8A8A] text-sm font-medium">
                 {stat.label}
               </p>
             </motion.div>
@@ -744,17 +728,17 @@ function SocialProof() {
             animate={inView ? "visible" : "hidden"}
             variants={fadeUp}
           >
-            <h2 className="text-3xl font-extrabold text-[#0D1B2A] mb-6">
+            <h2 className="text-3xl font-extrabold text-[#0A0A0A] mb-6">
               Founded by Jarred D. Johnson
             </h2>
-            <p className="text-[#778DA9] mb-4">
+            <p className="text-[#8A8A8A] mb-4">
               After being personally harassed by debt collectors over non-collectible debts,
-              Jarred D. Johnson founded Sue The Collector in 2014 to help consumers fight back.
+              Jarred D. Johnson founded Fight My Repo in 2014 to help consumers fight back.
               Based in Franklin, Tennessee, the company partners with law firms across the
               United States to take on illegal debt collectors, predatory lenders, and credit
               reporting violations.
             </p>
-            <ul className="space-y-3 text-[#778DA9]">
+            <ul className="space-y-3 text-[#8A8A8A]">
               {[
                 "Named #162 on Entrepreneur Magazine's 2018 Entrepreneur360 List",
                 "Helped cancel over $1 billion in consumer debt",
@@ -786,12 +770,12 @@ function SocialProof() {
                   {result.amount}
                 </span>
                 <div>
-                  <p className="font-semibold text-[#0D1B2A]">{result.desc}</p>
-                  <p className="text-sm text-[#778DA9]">{result.state}</p>
+                  <p className="font-semibold text-[#0A0A0A]">{result.desc}</p>
+                  <p className="text-sm text-[#8A8A8A]">{result.state}</p>
                 </div>
               </motion.div>
             ))}
-            <p className="text-xs text-[#778DA9] italic">
+            <p className="text-xs text-[#8A8A8A] italic">
               * Past results do not guarantee future outcomes. Each case is
               unique and results vary.
             </p>
@@ -824,7 +808,7 @@ const faqs = [
   },
   {
     q: "Do you handle cases in my state?",
-    a: "Yes. Sue The Collector partners with consumer protection attorneys in all 50 states through our nationwide network. No matter where you are, we can help.",
+    a: "Yes. Fight My Repo partners with consumer protection attorneys in all 50 states through our nationwide network. No matter where you are, we can help.",
   },
   {
     q: "What is the SCRA and does it apply to me?",
@@ -863,7 +847,7 @@ function FAQAccordionSection() {
           variants={fadeUp}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0D1B2A]">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A0A0A]">
             Frequently Asked Questions
           </h2>
         </motion.div>
@@ -875,10 +859,10 @@ function FAQAccordionSection() {
               value={`faq-${i}`}
               className="bg-white rounded-xl border border-gray-200 px-6"
             >
-              <AccordionTrigger className="text-left font-semibold text-[#0D1B2A] hover:text-[#D4A843] py-5">
+              <AccordionTrigger className="text-left font-semibold text-[#0A0A0A] hover:text-[#D4A843] py-5">
                 {faq.q}
               </AccordionTrigger>
-              <AccordionContent className="text-[#778DA9] pb-5">
+              <AccordionContent className="text-[#8A8A8A] pb-5">
                 {faq.a}
               </AccordionContent>
             </AccordionItem>
@@ -902,13 +886,13 @@ export default function HomePage() {
       <ViolationsChecklist />
 
       {/* State Map */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-[#0A0A0A] py-20 lg:py-28">
         <div className="mx-auto max-w-5xl px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
               We Fight in All 50 States
             </h2>
-            <p className="mt-3 text-[#778DA9] text-lg max-w-2xl mx-auto">
+            <p className="mt-3 text-[#8A8A8A] text-lg max-w-2xl mx-auto">
               Click your state to see your local repossession laws and how we can help.
             </p>
           </div>

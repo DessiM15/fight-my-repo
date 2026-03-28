@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { Phone } from "lucide-react";
-import { cn, VANITY_NUMBER, VANITY_HREF } from "@/lib/utils";
+import { cn, VANITY_HREF } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 interface CTABannerProps {
@@ -64,13 +63,9 @@ export function CTABanner({
           {showPhone && (
             <a
               href={VANITY_HREF}
-              className={cn(
-                "flex items-center gap-2 text-base font-semibold transition-colors",
-                styles.phone
-              )}
+              className="flex items-center gap-2 text-base font-bold text-[#C1121F] transition-colors hover:text-[#C1121F]/80"
             >
-              <Phone className="size-5" />
-              {VANITY_NUMBER}
+              Call Us Now
             </a>
           )}
         </div>

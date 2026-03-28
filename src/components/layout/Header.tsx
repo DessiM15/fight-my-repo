@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, Phone, ChevronDown, X, Scale } from "lucide-react";
+import { Menu, ChevronDown, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Sheet,
@@ -14,7 +14,8 @@ import {
   SheetClose,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { cn, VANITY_NUMBER, VANITY_HREF } from "@/lib/utils";
+import { cn, VANITY_HREF } from "@/lib/utils";
+import { Logo } from "./Logo";
 
 const practiceAreas = [
   { label: "Wrongful Repossession", href: "/wrongful-repossession" },
@@ -148,13 +149,7 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 lg:px-8">
         {/* Logo */}
         <Link href="/" className="group flex items-center gap-2.5">
-          <Scale className="size-6 text-gold" />
-          <div className="flex flex-col">
-            <span className="font-heading text-lg font-bold leading-tight tracking-wide text-white">
-              SUE THE COLLECTOR
-            </span>
-            <span className="h-0.5 w-full origin-left scale-x-100 bg-gold transition-transform group-hover:scale-x-110" />
-          </div>
+          <Logo size="md" />
         </Link>
 
         {/* Desktop Nav */}
@@ -178,10 +173,9 @@ export function Header() {
         <div className="hidden items-center gap-4 lg:flex">
           <a
             href={VANITY_HREF}
-            className="flex items-center gap-2 text-sm font-medium text-white transition-colors hover:text-gold"
+            className="flex items-center gap-2 text-sm font-bold text-[#C1121F] transition-colors hover:text-[#C1121F]/80"
           >
-            <Phone className="size-4" />
-            {VANITY_NUMBER}
+            Call Us Now
           </a>
           <Button
             asChild
@@ -209,10 +203,7 @@ export function Header() {
           >
             <SheetHeader className="flex flex-row items-center justify-between border-b border-white/10 p-4">
               <SheetTitle className="flex items-center gap-2 text-white">
-                <Scale className="size-5 text-gold" />
-                <span className="font-heading text-base font-bold tracking-wide">
-                  SUE THE COLLECTOR
-                </span>
+                <Logo size="sm" />
               </SheetTitle>
               <SheetClose asChild>
                 <button
@@ -241,13 +232,12 @@ export function Header() {
 
               <MobileNavSection title="States" items={popularStates} />
 
-              {/* Phone */}
+              {/* Call Us */}
               <a
                 href={VANITY_HREF}
-                className="flex items-center gap-3 border-b border-white/10 px-4 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10"
+                className="flex items-center gap-3 border-b border-white/10 px-4 py-3 text-sm font-bold text-[#C1121F] transition-colors hover:bg-white/10"
               >
-                <Phone className="size-4 text-gold" />
-                {VANITY_NUMBER}
+                Call Us Now
               </a>
 
               {/* CTA */}

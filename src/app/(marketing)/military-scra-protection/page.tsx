@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import Link from "next/link";
 import {
   Shield,
-  Phone,
   ChevronRight,
   CheckCircle2,
   AlertTriangle,
@@ -16,14 +15,14 @@ import {
   Flag,
   Swords,
 } from "lucide-react";
-import { VANITY_NUMBER, VANITY_HREF } from "@/lib/utils";
+import { VANITY_HREF } from "@/lib/utils";
 import InlineIntakeForm from "@/components/forms/InlineIntakeForm";
 import { CTABanner } from "@/components/layout/CTABanner";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 export const metadata: Metadata = {
   title:
-    "Military SCRA Protection Lawyers | Servicemembers Civil Relief Act | Sue The Collector",
+    "Military SCRA Protection Lawyers | Servicemembers Civil Relief Act | Fight My Repo",
   description:
     "Active duty military? The SCRA protects you from wrongful repossession, foreclosure, and high interest rates. Free case review. We fight for service members nationwide.",
 };
@@ -121,7 +120,7 @@ export default function MilitarySCRAPage() {
   return (
     <>
       {/* ─── Hero (Patriotic Theme) ─── */}
-      <section className="relative bg-gradient-to-br from-[#0D1B2A] via-[#1B4965] to-[#0D1B2A] py-20 lg:py-28 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#0A0A0A] via-[#1A1A1A] to-[#0A0A0A] py-20 lg:py-28 overflow-hidden">
         {/* Subtle patriotic accent */}
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 via-white to-red-600" />
 
@@ -149,7 +148,7 @@ export default function MilitarySCRAPage() {
                 </span>
               </h1>
 
-              <p className="mt-6 text-lg text-[#778DA9] max-w-xl">
+              <p className="mt-6 text-lg text-[#8A8A8A] max-w-xl">
                 The Servicemembers Civil Relief Act (SCRA) provides powerful
                 legal protections to active-duty military members. If a lender
                 violated your SCRA rights, you can sue for substantial
@@ -159,16 +158,15 @@ export default function MilitarySCRAPage() {
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <Link
                   href="#intake"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#D4A843] text-[#0D1B2A] font-bold text-lg hover:bg-[#D4A843]/90 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#D4A843] text-[#0A0A0A] font-bold text-lg hover:bg-[#D4A843]/90 transition-colors"
                 >
                   Free Case Review for Veterans
                 </Link>
                 <a
                   href={VANITY_HREF}
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-white/20 text-white font-bold hover:bg-white/5 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-[#C1121F]/30 text-[#C1121F] font-bold hover:bg-[#C1121F]/5 transition-colors"
                 >
-                  <Phone className="w-5 h-5" />
-                  {VANITY_NUMBER}
+                  Call Us Now
                 </a>
               </div>
             </div>
@@ -177,7 +175,7 @@ export default function MilitarySCRAPage() {
               <h2 className="text-xl font-bold text-white mb-2">
                 SCRA Recovery Ranges
               </h2>
-              <p className="text-[#778DA9] text-sm mb-4">
+              <p className="text-[#8A8A8A] text-sm mb-4">
                 Military members have recovered significant amounts for SCRA violations.
               </p>
               <ul className="space-y-3">
@@ -192,7 +190,7 @@ export default function MilitarySCRAPage() {
                     key={label}
                     className="flex items-center justify-between py-2 border-b border-white/5"
                   >
-                    <span className="text-[#778DA9] text-sm">{label}</span>
+                    <span className="text-[#8A8A8A] text-sm">{label}</span>
                     <span className="text-[#D4A843] font-bold text-sm">
                       {value}
                     </span>
@@ -207,12 +205,12 @@ export default function MilitarySCRAPage() {
       {/* ─── SCRA Overview ─── */}
       <section className="bg-white py-20 lg:py-28">
         <div className="mx-auto max-w-4xl px-4">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0D1B2A] mb-6 text-center">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A0A0A] mb-6 text-center">
             What is the Servicemembers Civil Relief Act?
           </h2>
-          <div className="prose prose-lg max-w-none text-[#778DA9]">
+          <div className="prose prose-lg max-w-none text-[#8A8A8A]">
             <p>
-              The <strong className="text-[#0D1B2A]">Servicemembers Civil Relief Act (SCRA)</strong>,
+              The <strong className="text-[#0A0A0A]">Servicemembers Civil Relief Act (SCRA)</strong>,
               formerly known as the Soldiers&rsquo; and Sailors&rsquo; Civil
               Relief Act, is a federal law that provides legal protections to
               military personnel while they are on active duty. The law
@@ -229,7 +227,7 @@ export default function MilitarySCRAPage() {
             </p>
             <p>
               Major banks and lenders have paid{" "}
-              <strong className="text-[#0D1B2A]">hundreds of millions of dollars</strong>{" "}
+              <strong className="text-[#0A0A0A]">hundreds of millions of dollars</strong>{" "}
               in settlements for SCRA violations, including JPMorgan Chase ($56M),
               Capital One ($12M), and Santander ($9.35M).
             </p>
@@ -241,10 +239,10 @@ export default function MilitarySCRAPage() {
       <section className="bg-gray-50 py-20 lg:py-28">
         <div className="mx-auto max-w-5xl px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0D1B2A]">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A0A0A]">
               Who Qualifies for SCRA Protection?
             </h2>
-            <p className="mt-3 text-[#778DA9] text-lg">
+            <p className="mt-3 text-[#8A8A8A] text-lg">
               The SCRA applies to the following service members and their dependents.
             </p>
           </div>
@@ -259,10 +257,10 @@ export default function MilitarySCRAPage() {
                   <item.icon className="w-6 h-6 text-[#D4A843]" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-[#0D1B2A] mb-1">
+                  <h3 className="text-lg font-bold text-[#0A0A0A] mb-1">
                     {item.title}
                   </h3>
-                  <p className="text-[#778DA9] text-sm">{item.desc}</p>
+                  <p className="text-[#8A8A8A] text-sm">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -274,10 +272,10 @@ export default function MilitarySCRAPage() {
       <section className="bg-white py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0D1B2A]">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A0A0A]">
               SCRA Protections
             </h2>
-            <p className="mt-3 text-[#778DA9] text-lg max-w-2xl mx-auto">
+            <p className="mt-3 text-[#8A8A8A] text-lg max-w-2xl mx-auto">
               Key protections provided by the Servicemembers Civil Relief Act.
             </p>
           </div>
@@ -291,10 +289,10 @@ export default function MilitarySCRAPage() {
                 <div className="w-12 h-12 rounded-xl bg-[#D4A843]/10 flex items-center justify-center mb-4">
                   <p.icon className="w-6 h-6 text-[#D4A843]" />
                 </div>
-                <h3 className="text-lg font-bold text-[#0D1B2A] mb-2">
+                <h3 className="text-lg font-bold text-[#0A0A0A] mb-2">
                   {p.title}
                 </h3>
-                <p className="text-[#778DA9] text-sm">{p.desc}</p>
+                <p className="text-[#8A8A8A] text-sm">{p.desc}</p>
               </div>
             ))}
           </div>
@@ -302,13 +300,13 @@ export default function MilitarySCRAPage() {
       </section>
 
       {/* ─── Violations ─── */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-[#0A0A0A] py-20 lg:py-28">
         <div className="mx-auto max-w-5xl px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
               Common SCRA Violations
             </h2>
-            <p className="mt-3 text-[#778DA9] text-lg">
+            <p className="mt-3 text-[#8A8A8A] text-lg">
               If any of these happened to you during active duty, you may have a case.
             </p>
           </div>
@@ -323,7 +321,7 @@ export default function MilitarySCRAPage() {
                   <h3 className="text-lg font-bold text-white mb-1">
                     {v.title}
                   </h3>
-                  <p className="text-[#778DA9] text-sm">{v.desc}</p>
+                  <p className="text-[#8A8A8A] text-sm">{v.desc}</p>
                 </div>
                 <div className="flex-shrink-0 px-4 py-2 bg-[#D4A843]/10 border border-[#D4A843]/30 rounded-lg">
                   <span className="text-[#D4A843] font-bold text-sm whitespace-nowrap">
@@ -346,10 +344,10 @@ export default function MilitarySCRAPage() {
                 Free for Service Members
               </span>
             </div>
-            <h2 className="text-3xl font-extrabold text-[#0D1B2A]">
+            <h2 className="text-3xl font-extrabold text-[#0A0A0A]">
               Get Your Free SCRA Case Review
             </h2>
-            <p className="mt-3 text-[#778DA9]">
+            <p className="mt-3 text-[#8A8A8A]">
               Tell us about your situation. We proudly serve those who serve our
               country.
             </p>

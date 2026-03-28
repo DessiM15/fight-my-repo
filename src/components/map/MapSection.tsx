@@ -13,7 +13,7 @@ export default function MapSection() {
       <div className="flex justify-center mb-8">
         <StateSearch />
       </div>
-      <div className="max-w-4xl mx-auto bg-[#0D1B2A] rounded-2xl p-4 sm:p-8">
+      <div className="max-w-4xl mx-auto bg-[#0A0A0A] rounded-2xl p-4 sm:p-8">
         <USMap />
       </div>
     </>

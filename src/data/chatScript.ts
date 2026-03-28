@@ -1,5 +1,5 @@
 // =============================================================================
-// Chat Script Data for Sue The Collector - Guided Intake Chat Flow
+// Chat Script Data for Fight My Repo - Guided Intake Chat Flow
 // =============================================================================
 
 export interface ChatOption {

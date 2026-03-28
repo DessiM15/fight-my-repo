@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Design Comparison | Sue The Collector | Before & After",
+  title: "Design Comparison | Fight My Repo | Before & After",
   description:
     "Compare the current website design with the new redesign. See the improvements in hero, navigation, mobile experience, and lead capture.",
   robots: "noindex, nofollow",
@@ -21,12 +21,12 @@ export default function CompareLayout({
         <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-[#0D1B2A] transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-[#0A0A0A] transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Main Site
           </Link>
-          <span className="text-sm font-semibold text-[#0D1B2A]">
+          <span className="text-sm font-semibold text-[#0A0A0A]">
             Design Comparison
           </span>
         </div>

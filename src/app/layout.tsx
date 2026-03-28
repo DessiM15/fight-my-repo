@@ -16,14 +16,14 @@ const plusJakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Sue The Collector - Wrongful Repossession Attorneys | Free Case Review",
-    template: "%s | Sue The Collector",
+    default: "Fight My Repo - Wrongful Repossession Attorneys | Free Case Review",
+    template: "%s | Fight My Repo",
   },
   description:
-    "Wrongfully repossessed? Sue The Collector fights for consumers nationwide. Sue for $10,000 - $100,000+. Free case review. Over $1 billion in debt canceled since 2014.",
+    "Wrongfully repossessed? Fight My Repo fights for consumers nationwide. Sue for $10,000 - $100,000+. Free case review. Over $1 billion in debt canceled since 2014.",
   keywords: [
     "wrongful repossession",
-    "sue the collector",
+    "fight my repo",
     "debt collection violations",
     "FDCPA attorney",
     "repossession lawyer",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "Sue The Collector",
+    siteName: "Fight My Repo",
   },
 };
 

@@ -4,11 +4,11 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import IntakeWizard from "@/components/forms/IntakeWizard";
 
 export const metadata: Metadata = {
-  title: "Free Case Review | Sue The Collector",
+  title: "Free Case Review | Fight My Repo",
   description:
     "Get your free case review in minutes. Find out if you have a wrongful repossession, debt collection harassment, or credit report error case. No obligation. No cost.",
   openGraph: {
-    title: "Free Case Review | Sue The Collector",
+    title: "Free Case Review | Fight My Repo",
     description:
       "Find out if you have a case in minutes. No obligation. No cost. Our attorneys have recovered millions for consumers.",
   },

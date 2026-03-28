@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import {
-  Phone,
   Car,
   Shield,
   Scale,
@@ -13,7 +12,7 @@ import {
   CheckCircle2,
   Award,
 } from "lucide-react";
-import { VANITY_NUMBER, VANITY_HREF } from "@/lib/utils";
+import { VANITY_HREF } from "@/lib/utils";
 import InlineIntakeForm from "@/components/forms/InlineIntakeForm";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { CTABanner } from "@/components/layout/CTABanner";
@@ -66,7 +65,7 @@ export default async function StatePage({
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="bg-gradient-to-br from-[#0D1B2A] via-[#1B4965] to-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-gradient-to-br from-[#0A0A0A] via-[#1A1A1A] to-[#0A0A0A] py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4">
           <Breadcrumbs
             items={[
@@ -88,7 +87,7 @@ export default async function StatePage({
               {state.name} Wrongful Repossession Lawyers
             </h1>
 
-            <p className="mt-6 text-lg text-[#778DA9]">
+            <p className="mt-6 text-lg text-[#8A8A8A]">
               If your vehicle was wrongfully repossessed in {state.name}, you
               may be entitled to {rangeStr} in damages. Our attorneys
               handle {state.abbreviation} repo cases on contingency &mdash; you
@@ -98,15 +97,15 @@ export default async function StatePage({
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Link
                 href="#intake"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#D4A843] text-[#0D1B2A] font-bold hover:bg-[#D4A843]/90 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#D4A843] text-[#0A0A0A] font-bold hover:bg-[#D4A843]/90 transition-colors"
               >
                 Free Case Review <ChevronRight className="w-4 h-4" />
               </Link>
               <a
                 href={VANITY_HREF}
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-white/20 text-white font-bold hover:bg-white/5 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-[#C1121F]/30 text-[#C1121F] font-bold hover:bg-[#C1121F]/5 transition-colors"
               >
-                <Phone className="w-5 h-5" /> {VANITY_NUMBER}
+                Call Us Now
               </a>
             </div>
           </div>
@@ -116,7 +115,7 @@ export default async function StatePage({
       {/* ─── State Law Overview ─── */}
       <section className="bg-white py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4">
-          <h2 className="text-3xl font-extrabold text-[#0D1B2A] mb-10">
+          <h2 className="text-3xl font-extrabold text-[#0A0A0A] mb-10">
             {state.name} Repossession Law Overview
           </h2>
 
@@ -161,11 +160,11 @@ export default async function StatePage({
               >
                 <div className="flex items-center gap-3 mb-3">
                   <item.icon className="w-5 h-5 text-[#D4A843]" />
-                  <span className="font-bold text-[#0D1B2A] text-sm">
+                  <span className="font-bold text-[#0A0A0A] text-sm">
                     {item.label}
                   </span>
                 </div>
-                <p className="text-[#778DA9] text-sm">{item.value}</p>
+                <p className="text-[#8A8A8A] text-sm">{item.value}</p>
               </div>
             ))}
           </div>
@@ -176,7 +175,7 @@ export default async function StatePage({
       {isFullPage && ext && ext.length > 0 && (
         <section className="bg-gray-50 py-20 lg:py-28">
           <div className="mx-auto max-w-4xl px-4">
-            <h2 className="text-3xl font-extrabold text-[#0D1B2A] mb-8">
+            <h2 className="text-3xl font-extrabold text-[#0A0A0A] mb-8">
               Key {state.name} Statutes &amp; Protections
             </h2>
             <div className="space-y-4">
@@ -188,7 +187,7 @@ export default async function StatePage({
                   <div className="flex items-start gap-3 mb-2">
                     <Scale className="w-5 h-5 text-[#D4A843] flex-shrink-0 mt-0.5" />
                     <div>
-                      <h3 className="font-bold text-[#0D1B2A]">
+                      <h3 className="font-bold text-[#0A0A0A]">
                         {statute.name}
                       </h3>
                       <p className="text-xs text-[#D4A843] font-mono mt-0.5">
@@ -196,7 +195,7 @@ export default async function StatePage({
                       </p>
                     </div>
                   </div>
-                  <p className="text-[#778DA9] text-sm mt-3">
+                  <p className="text-[#8A8A8A] text-sm mt-3">
                     {statute.description}
                   </p>
                 </div>
@@ -210,10 +209,10 @@ export default async function StatePage({
       {isFullPage && lenders && lenders.length > 0 && (
         <section className="bg-white py-20 lg:py-28">
           <div className="mx-auto max-w-4xl px-4">
-            <h2 className="text-3xl font-extrabold text-[#0D1B2A] mb-8">
+            <h2 className="text-3xl font-extrabold text-[#0A0A0A] mb-8">
               Common Lenders in {state.name}
             </h2>
-            <p className="text-[#778DA9] mb-6">
+            <p className="text-[#8A8A8A] mb-6">
               We have experience suing these lenders on behalf of {state.name}{" "}
               consumers:
             </p>
@@ -224,7 +223,7 @@ export default async function StatePage({
                   className="flex items-center gap-3 bg-gray-50 rounded-xl border border-gray-200 p-4"
                 >
                   <CheckCircle2 className="w-4 h-4 text-[#D4A843] flex-shrink-0" />
-                  <span className="text-[#0D1B2A] text-sm font-medium">
+                  <span className="text-[#0A0A0A] text-sm font-medium">
                     {lender}
                   </span>
                 </div>
@@ -238,7 +237,7 @@ export default async function StatePage({
       {isFullPage && faqs && faqs.length > 0 && (
         <section className="bg-gray-50 py-20 lg:py-28">
           <div className="mx-auto max-w-4xl px-4">
-            <h2 className="text-3xl font-extrabold text-[#0D1B2A] mb-8">
+            <h2 className="text-3xl font-extrabold text-[#0A0A0A] mb-8">
               {state.name} Wrongful Repossession FAQ
             </h2>
             <div className="space-y-4">
@@ -247,10 +246,10 @@ export default async function StatePage({
                   key={i}
                   className="bg-white rounded-xl border border-gray-200 p-6"
                 >
-                  <h3 className="font-bold text-[#0D1B2A] mb-2">
+                  <h3 className="font-bold text-[#0A0A0A] mb-2">
                     {faq.question}
                   </h3>
-                  <p className="text-[#778DA9] text-sm">{faq.answer}</p>
+                  <p className="text-[#8A8A8A] text-sm">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -261,24 +260,24 @@ export default async function StatePage({
       {/* ─── Settlement Range Banner ─── */}
       <section className="bg-[#D4A843] py-12">
         <div className="mx-auto max-w-3xl px-4 text-center">
-          <p className="text-[#0D1B2A] font-semibold mb-1">
+          <p className="text-[#0A0A0A] font-semibold mb-1">
             Typical {state.name} Settlement Range
           </p>
-          <p className="text-4xl font-extrabold text-[#0D1B2A]">{rangeStr}</p>
-          <p className="text-[#0D1B2A]/70 text-sm mt-2">
+          <p className="text-4xl font-extrabold text-[#0A0A0A]">{rangeStr}</p>
+          <p className="text-[#0A0A0A]/70 text-sm mt-2">
             * Past results do not guarantee future outcomes.
           </p>
         </div>
       </section>
 
       {/* ─── Intake Form ─── */}
-      <section id="intake" className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section id="intake" className="bg-[#0A0A0A] py-20 lg:py-28">
         <div className="mx-auto max-w-2xl px-4">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-extrabold text-white">
               Free {state.name} Case Evaluation
             </h2>
-            <p className="mt-3 text-[#778DA9]">
+            <p className="mt-3 text-[#8A8A8A]">
               Tell us about your {state.abbreviation} repossession. No cost, no
               obligation.
             </p>

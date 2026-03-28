@@ -13,7 +13,6 @@ import {
   ChevronRight,
   ChevronLeft,
   Loader2,
-  Phone,
   ArrowRight,
 } from "lucide-react";
 import Link from "next/link";
@@ -28,7 +27,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import { cn, VANITY_NUMBER, VANITY_HREF } from "@/lib/utils";
+import { cn, VANITY_HREF } from "@/lib/utils";
 
 /* ------------------------------------------------------------------ */
 /*  Constants                                                          */
@@ -1061,10 +1060,9 @@ function StepConfirmation() {
       >
         <a
           href={VANITY_HREF}
-          className="inline-flex h-12 items-center gap-2 rounded-md bg-gold px-8 text-base font-bold text-navy transition-colors hover:bg-gold-dark"
+          className="inline-flex h-12 items-center gap-2 rounded-md bg-[#C1121F] px-8 text-base font-bold text-white transition-colors hover:bg-[#C1121F]/90"
         >
-          <Phone className="size-5" />
-          Call Us Now: {VANITY_NUMBER}
+          Call Us Now
         </a>
         <Link
           href="/"

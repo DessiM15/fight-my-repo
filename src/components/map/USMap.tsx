@@ -65,7 +65,7 @@ function USMap({ className }: USMapProps) {
       {/* Tooltip */}
       {hoveredState && (
         <div
-          className="pointer-events-none fixed z-50 px-3 py-1.5 bg-[#0D1B2A] text-white text-sm font-semibold rounded-lg shadow-lg border border-[#D4A843]/30"
+          className="pointer-events-none fixed z-50 px-3 py-1.5 bg-[#0A0A0A] text-white text-sm font-semibold rounded-lg shadow-lg border border-[#D4A843]/30"
           style={{
             left: tooltipPos.x + 12,
             top: tooltipPos.y - 30,
@@ -101,8 +101,8 @@ function USMap({ className }: USMapProps) {
                   onClick={() => handleClick(abbr)}
                   style={{
                     default: {
-                      fill: "#1B4965",
-                      stroke: "#0D1B2A",
+                      fill: "#1A1A1A",
+                      stroke: "#0A0A0A",
                       strokeWidth: 0.75,
                       outline: "none",
                       cursor: "pointer",
@@ -110,14 +110,14 @@ function USMap({ className }: USMapProps) {
                     },
                     hover: {
                       fill: "#D4A843",
-                      stroke: "#0D1B2A",
+                      stroke: "#0A0A0A",
                       strokeWidth: 1,
                       outline: "none",
                       cursor: "pointer",
                     },
                     pressed: {
                       fill: "#b8912e",
-                      stroke: "#0D1B2A",
+                      stroke: "#0A0A0A",
                       strokeWidth: 1,
                       outline: "none",
                     },

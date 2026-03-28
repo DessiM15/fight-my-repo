@@ -5,7 +5,6 @@ import {
   AlertTriangle,
   Shield,
   CheckCircle2,
-  Phone,
   ChevronRight,
   FileText,
   Scale,
@@ -14,13 +13,13 @@ import {
   Eye,
   Ban,
 } from "lucide-react";
-import { VANITY_NUMBER, VANITY_HREF } from "@/lib/utils";
+import { VANITY_HREF } from "@/lib/utils";
 import InlineIntakeForm from "@/components/forms/InlineIntakeForm";
 import { CTABanner } from "@/components/layout/CTABanner";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "FCRA Credit Report Error Lawyers | Sue for $1K-$50K+ | Sue The Collector",
+  title: "FCRA Credit Report Error Lawyers | Sue for $1K-$50K+ | Fight My Repo",
   description:
     "Errors on your credit report? The Fair Credit Reporting Act gives you the right to sue. Free case review. No fees unless we win.",
 };
@@ -97,7 +96,7 @@ export default function FCRAPage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="bg-gradient-to-br from-[#0D1B2A] via-[#1B4965] to-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-gradient-to-br from-[#0A0A0A] via-[#1A1A1A] to-[#0A0A0A] py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4">
           <Breadcrumbs
             items={[
@@ -122,7 +121,7 @@ export default function FCRAPage() {
                 </span>
               </h1>
 
-              <p className="mt-6 text-lg text-[#778DA9] max-w-xl">
+              <p className="mt-6 text-lg text-[#8A8A8A] max-w-xl">
                 The Fair Credit Reporting Act (FCRA) gives you the right to sue
                 credit bureaus and furnishers that report inaccurate information
                 and refuse to fix it. We handle these cases nationwide on
@@ -132,16 +131,15 @@ export default function FCRAPage() {
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <Link
                   href="#intake"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#D4A843] text-[#0D1B2A] font-bold text-lg hover:bg-[#D4A843]/90 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#D4A843] text-[#0A0A0A] font-bold text-lg hover:bg-[#D4A843]/90 transition-colors"
                 >
                   Free Case Review
                 </Link>
                 <a
                   href={VANITY_HREF}
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-white/20 text-white font-bold hover:bg-white/5 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-[#C1121F]/30 text-[#C1121F] font-bold hover:bg-[#C1121F]/5 transition-colors"
                 >
-                  <Phone className="w-5 h-5" />
-                  {VANITY_NUMBER}
+                  Call Us Now
                 </a>
               </div>
             </div>
@@ -162,7 +160,7 @@ export default function FCRAPage() {
                     key={label}
                     className="flex items-center justify-between py-2 border-b border-white/5"
                   >
-                    <span className="text-[#778DA9] text-sm">{label}</span>
+                    <span className="text-[#8A8A8A] text-sm">{label}</span>
                     <span className="text-[#D4A843] font-bold text-sm">
                       {value}
                     </span>
@@ -177,12 +175,12 @@ export default function FCRAPage() {
       {/* ─── What is FCRA ─── */}
       <section className="bg-white py-20 lg:py-28">
         <div className="mx-auto max-w-4xl px-4">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0D1B2A] mb-6 text-center">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A0A0A] mb-6 text-center">
             What is the Fair Credit Reporting Act?
           </h2>
-          <div className="prose prose-lg max-w-none text-[#778DA9]">
+          <div className="prose prose-lg max-w-none text-[#8A8A8A]">
             <p>
-              The <strong className="text-[#0D1B2A]">Fair Credit Reporting Act (FCRA)</strong>{" "}
+              The <strong className="text-[#0A0A0A]">Fair Credit Reporting Act (FCRA)</strong>{" "}
               is a federal law enacted in 1970 that regulates the collection,
               dissemination, and use of consumer credit information. It was
               designed to ensure the accuracy, fairness, and privacy of the
@@ -196,7 +194,7 @@ export default function FCRAPage() {
             </p>
             <p>
               The law also places obligations on{" "}
-              <strong className="text-[#0D1B2A]">furnishers</strong> &mdash; the banks,
+              <strong className="text-[#0A0A0A]">furnishers</strong> &mdash; the banks,
               lenders, and collection agencies that provide information to the
               credit bureaus. Furnishers must report accurate information and
               properly investigate disputes.
@@ -208,7 +206,7 @@ export default function FCRAPage() {
       {/* ─── Three Bureau Cards ─── */}
       <section className="bg-gray-50 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0D1B2A] mb-12 text-center">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A0A0A] mb-12 text-center">
             The Three Credit Bureaus
           </h2>
 
@@ -226,17 +224,17 @@ export default function FCRAPage() {
                   </h3>
                 </div>
                 <div className="p-6">
-                  <p className="text-[#778DA9] text-sm mb-4">{bureau.desc}</p>
+                  <p className="text-[#8A8A8A] text-sm mb-4">{bureau.desc}</p>
                   <div className="space-y-2 text-sm">
                     <div className="flex items-center gap-2">
                       <Phone className="w-4 h-4 text-[#D4A843]" />
-                      <span className="text-[#0D1B2A] font-medium">
+                      <span className="text-[#0A0A0A] font-medium">
                         {bureau.phone}
                       </span>
                     </div>
                     <div className="flex items-center gap-2">
                       <FileText className="w-4 h-4 text-[#D4A843]" />
-                      <span className="text-[#778DA9] text-xs break-all">
+                      <span className="text-[#8A8A8A] text-xs break-all">
                         {bureau.disputes}
                       </span>
                     </div>
@@ -252,10 +250,10 @@ export default function FCRAPage() {
       <section className="bg-white py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0D1B2A]">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A0A0A]">
               Common FCRA Violations
             </h2>
-            <p className="mt-3 text-[#778DA9] text-lg max-w-2xl mx-auto">
+            <p className="mt-3 text-[#8A8A8A] text-lg max-w-2xl mx-auto">
               If any of these apply to you, the credit bureau or furnisher may
               be liable for damages.
             </p>
@@ -270,10 +268,10 @@ export default function FCRAPage() {
                 <div className="w-12 h-12 rounded-xl bg-[#D4A843]/10 flex items-center justify-center mb-4">
                   <v.icon className="w-6 h-6 text-[#D4A843]" />
                 </div>
-                <h3 className="text-lg font-bold text-[#0D1B2A] mb-2">
+                <h3 className="text-lg font-bold text-[#0A0A0A] mb-2">
                   {v.title}
                 </h3>
-                <p className="text-[#778DA9] text-sm">{v.desc}</p>
+                <p className="text-[#8A8A8A] text-sm">{v.desc}</p>
               </div>
             ))}
           </div>
@@ -281,7 +279,7 @@ export default function FCRAPage() {
       </section>
 
       {/* ─── Your Rights ─── */}
-      <section className="bg-[#0D1B2A] py-20 lg:py-28">
+      <section className="bg-[#0A0A0A] py-20 lg:py-28">
         <div className="mx-auto max-w-4xl px-4">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-10 text-center">
             Your Rights Under the FCRA
@@ -293,7 +291,7 @@ export default function FCRAPage() {
                 className="flex items-start gap-4 bg-white/5 border border-white/10 rounded-xl p-5"
               >
                 <CheckCircle2 className="w-5 h-5 text-[#D4A843] flex-shrink-0 mt-0.5" />
-                <span className="text-[#778DA9]">{right}</span>
+                <span className="text-[#8A8A8A]">{right}</span>
               </div>
             ))}
           </div>
@@ -304,10 +302,10 @@ export default function FCRAPage() {
       <section id="intake" className="bg-white py-20 lg:py-28">
         <div className="mx-auto max-w-2xl px-4">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-extrabold text-[#0D1B2A]">
+            <h2 className="text-3xl font-extrabold text-[#0A0A0A]">
               Get Your Free FCRA Case Review
             </h2>
-            <p className="mt-3 text-[#778DA9]">
+            <p className="mt-3 text-[#8A8A8A]">
               Tell us about the errors on your credit report. We&rsquo;ll review
               your case at no cost.
             </p>

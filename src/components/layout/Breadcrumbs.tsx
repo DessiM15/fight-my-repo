@@ -21,7 +21,7 @@ export function Breadcrumbs({ items, variant = "dark" }: BreadcrumbsProps) {
       "@type": "ListItem",
       position: index + 1,
       name: item.label,
-      ...(item.href ? { item: `https://suethecollector.com${item.href}` } : {}),
+      ...(item.href ? { item: `https://fightmyrepo.com${item.href}` } : {}),
     })),
   };
 

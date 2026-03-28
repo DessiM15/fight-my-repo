@@ -231,9 +231,9 @@ export default function InlineIntakeForm({ variant = "hero" }: InlineIntakeFormP
               className={cn(
                 "flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold transition-colors",
                 i < currentStep
-                  ? "bg-[#D4A843] text-[#0D1B2A]"
+                  ? "bg-[#D4A843] text-[#0A0A0A]"
                   : i === currentStep
-                  ? "bg-[#D4A843] text-[#0D1B2A]"
+                  ? "bg-[#D4A843] text-[#0A0A0A]"
                   : variant === "hero"
                   ? "bg-white/10 text-white/40"
                   : "bg-gray-200 text-gray-400"
@@ -247,7 +247,7 @@ export default function InlineIntakeForm({ variant = "hero" }: InlineIntakeFormP
                 i <= currentStep
                   ? variant === "hero"
                     ? "text-white"
-                    : "text-[#0D1B2A]"
+                    : "text-[#0A0A0A]"
                   : variant === "hero"
                   ? "text-white/40"
                   : "text-gray-400"
@@ -308,12 +308,12 @@ export default function InlineIntakeForm({ variant = "hero" }: InlineIntakeFormP
   /* ═══════════════════ Render ═══════════════════ */
 
   const isHero = variant === "hero";
-  const labelClass = cn("mb-1.5 block text-sm font-semibold", isHero ? "text-white/90" : "text-[#0D1B2A]");
+  const labelClass = cn("mb-1.5 block text-sm font-semibold", isHero ? "text-white/90" : "text-[#0A0A0A]");
   const inputClass = cn(
     "h-11 text-sm",
     isHero
       ? "border-white/20 bg-white/10 text-white placeholder:text-white/40 focus-visible:border-[#D4A843] focus-visible:ring-[#D4A843]/30"
-      : "border-gray-300 bg-gray-50 text-[#0D1B2A] placeholder:text-gray-400"
+      : "border-gray-300 bg-gray-50 text-[#0A0A0A] placeholder:text-gray-400"
   );
 
   return (
@@ -365,7 +365,7 @@ export default function InlineIntakeForm({ variant = "hero" }: InlineIntakeFormP
                       "h-11 w-full text-sm",
                       isHero
                         ? "border-white/20 bg-white/10 text-white [&>span]:text-white/40 data-[state=open]:border-[#D4A843]"
-                        : "border-gray-300 bg-gray-50 text-[#0D1B2A]",
+                        : "border-gray-300 bg-gray-50 text-[#0A0A0A]",
                       lender && (isHero ? "[&>span]:text-white" : "")
                     )}
                   >
@@ -394,7 +394,7 @@ export default function InlineIntakeForm({ variant = "hero" }: InlineIntakeFormP
                 type="button"
                 onClick={goNext}
                 disabled={!step1Valid}
-                className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-md bg-[#D4A843] text-sm font-bold text-[#0D1B2A] transition-all hover:brightness-110 disabled:pointer-events-none disabled:opacity-40"
+                className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-md bg-[#D4A843] text-sm font-bold text-[#0A0A0A] transition-all hover:brightness-110 disabled:pointer-events-none disabled:opacity-40"
               >
                 Continue <ChevronRight className="ml-1 h-4 w-4" />
               </button>
@@ -414,7 +414,7 @@ export default function InlineIntakeForm({ variant = "hero" }: InlineIntakeFormP
               className="space-y-4"
             >
               <div>
-                <p className={cn("text-sm font-bold", isHero ? "text-white" : "text-[#0D1B2A]")}>
+                <p className={cn("text-sm font-bold", isHero ? "text-white" : "text-[#0A0A0A]")}>
                   Check all that apply
                 </p>
                 <p className={cn("text-xs", isHero ? "text-[#D4A843]" : "text-[#D4A843]")}>
@@ -513,7 +513,7 @@ export default function InlineIntakeForm({ variant = "hero" }: InlineIntakeFormP
                 <button
                   type="button"
                   onClick={goNext}
-                  className="inline-flex h-11 flex-[2] items-center justify-center gap-2 rounded-md bg-[#D4A843] text-sm font-bold text-[#0D1B2A] transition-all hover:brightness-110"
+                  className="inline-flex h-11 flex-[2] items-center justify-center gap-2 rounded-md bg-[#D4A843] text-sm font-bold text-[#0A0A0A] transition-all hover:brightness-110"
                 >
                   Continue <ChevronRight className="ml-1 h-4 w-4" />
                 </button>
@@ -533,7 +533,7 @@ export default function InlineIntakeForm({ variant = "hero" }: InlineIntakeFormP
               transition={{ duration: 0.25, ease: "easeOut" as const }}
             >
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-3">
-                <p className={cn("text-sm font-bold", isHero ? "text-white" : "text-[#0D1B2A]")}>
+                <p className={cn("text-sm font-bold", isHero ? "text-white" : "text-[#0A0A0A]")}>
                   Get Your Free Evaluation
                 </p>
 
@@ -592,7 +592,7 @@ export default function InlineIntakeForm({ variant = "hero" }: InlineIntakeFormP
                         "h-11 w-full text-sm",
                         isHero
                           ? "border-white/20 bg-white/10 text-white [&>span]:text-white/40 data-[state=open]:border-[#D4A843]"
-                          : "border-gray-300 bg-gray-50 text-[#0D1B2A]"
+                          : "border-gray-300 bg-gray-50 text-[#0A0A0A]"
                       )}
                     >
                       <SelectValue placeholder="Select your state" />
@@ -626,7 +626,7 @@ export default function InlineIntakeForm({ variant = "hero" }: InlineIntakeFormP
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="inline-flex h-11 flex-[2] items-center justify-center gap-2 rounded-md bg-[#D4A843] text-sm font-bold text-[#0D1B2A] transition-all hover:brightness-110 disabled:pointer-events-none disabled:opacity-50"
+                    className="inline-flex h-11 flex-[2] items-center justify-center gap-2 rounded-md bg-[#D4A843] text-sm font-bold text-[#0A0A0A] transition-all hover:brightness-110 disabled:pointer-events-none disabled:opacity-50"
                   >
                     {isSubmitting ? (
                       <>
