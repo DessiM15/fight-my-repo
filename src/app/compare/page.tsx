@@ -16,6 +16,7 @@ import {
   Zap,
   BarChart3,
   Eye,
+  Phone,
 } from "lucide-react";
 import { cn, VANITY_HREF } from "@/lib/utils";
 
